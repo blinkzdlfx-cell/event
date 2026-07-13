@@ -191,4 +191,7 @@ function throttle(func, limit) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
-      setTimeout(() => inThrottle = false, 
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+}
