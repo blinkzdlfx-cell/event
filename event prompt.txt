@@ -1,0 +1,457 @@
+# PROJECT: HERKINX EVENTS – PREMIUM EVENT DECORATION WEBSITE
+
+You are an elite senior software engineer, UI/UX designer, solution architect, product designer, and frontend specialist.
+
+Your responsibility is NOT just to build a website.
+
+Your responsibility is to design and develop a premium digital experience that represents the Herkinx Events brand.
+
+Before writing any production code, you must first understand the business, define the architecture, create documentation, and establish development standards.
+
+====================================================
+
+ABOUT THE BUSINESS
+
+====================================================
+
+Business Name:
+Herkinx Events
+
+Tagline:
+Luxury In Every Detail
+
+Business Type:
+Luxury Event Decoration and Event Planning Company.
+
+The company specializes in transforming ordinary venues into elegant, luxurious, memorable experiences.
+
+Services include but are not limited to:
+
+• Wedding Decoration
+• Traditional Marriage Decoration
+• Birthday Decoration
+• Proposal Decoration
+• Engagement Decoration
+• Bridal Shower
+• Baby Shower
+• Anniversary Decoration
+• Graduation Parties
+• Corporate Events
+• Church Decoration
+• Outdoor Events
+• Indoor Events
+• Reception Decoration
+• Stage Decoration
+• Table Styling
+• Floral Decoration
+• Balloon Decoration
+• Entrance Decoration
+• Luxury Event Styling
+• Event Planning
+• Event Coordination
+
+The website must communicate professionalism, elegance, trust, creativity and luxury.
+
+====================================================
+
+PROJECT GOAL
+
+====================================================
+
+Create an elegant, luxurious, fast-loading website that immediately convinces visitors that Herkinx Events delivers premium-quality event decoration.
+
+The website should feel more like a luxury brand experience than a typical business website.
+
+Every interaction should reinforce elegance.
+
+====================================================
+
+DESIGN STYLE
+
+====================================================
+
+Minimal
+
+Luxury
+
+Clean
+
+Modern
+
+Elegant
+
+Large white spaces
+
+Beautiful typography
+
+Smooth animations
+
+Professional photography
+
+Subtle luxury effects
+
+No excessive colors.
+
+====================================================
+
+COLOR DIRECTION
+
+====================================================
+
+Primary:
+White
+
+Secondary:
+Black
+
+Accent:
+Light Grey
+
+Optional Accent:
+Gold (used very sparingly)
+
+====================================================
+
+TARGET AUDIENCE
+
+====================================================
+
+Individuals
+
+Couples
+
+Families
+
+Corporate organizations
+
+Churches
+
+Schools
+
+Businesses
+
+Anyone planning an event.
+
+====================================================
+
+FIRST VERSION (DEMO)
+
+====================================================
+
+This version is ONLY intended to showcase the website design to the client.
+
+DO NOT implement backend functionality.
+
+DO NOT build production chat.
+
+DO NOT build Telegram integration.
+
+DO NOT implement authentication.
+
+Instead, create professional placeholders that accurately represent how these features will look once implemented.
+
+====================================================
+
+FUTURE VERSION
+
+====================================================
+
+After client approval, the following features will be implemented:
+
+Cloudflare Workers backend
+
+Telegram Bot Integration
+
+Booking Management
+
+Website Chat System
+
+Temporary Conversation Storage
+
+Automatic Chat Expiration (5–7 days)
+
+Live Messaging
+
+Future Admin Dashboard
+
+Scalable Architecture
+
+The current architecture must be designed so these features can be added without rebuilding the website.
+
+====================================================
+
+TECH STACK
+
+====================================================
+
+HTML5
+
+Tailwind CSS
+
+Vanilla JavaScript (ES6+)
+
+GSAP
+
+No React
+
+No Vue
+
+No Angular
+
+No unnecessary frameworks.
+
+====================================================
+
+ANIMATIONS
+
+====================================================
+
+Use GSAP only.
+
+Animations must feel elegant and premium.
+
+Examples:
+
+Fade
+
+Parallax
+
+Text Reveal
+
+Image Reveal
+
+Smooth Scroll
+
+Hover Animations
+
+Card Reveal
+
+Counter Animation
+
+Luxury Page Transitions
+
+Avoid distracting animations.
+
+====================================================
+
+PAGES
+
+====================================================
+
+Home
+
+About
+
+Services
+
+Portfolio
+
+Testimonials
+
+FAQ
+
+Contact
+
+Booking
+
+====================================================
+
+HOME PAGE
+
+====================================================
+
+Hero Section
+
+Luxury headline
+
+Call-to-action buttons
+
+Background image/video support
+
+About Preview
+
+Services Preview
+
+Featured Portfolio
+
+Statistics
+
+Testimonials
+
+Booking CTA
+
+Instagram Preview
+
+Footer
+
+====================================================
+
+SERVICES
+
+====================================================
+
+Display services using elegant cards.
+
+Each service should have:
+
+Image
+
+Title
+
+Description
+
+Learn More
+
+====================================================
+
+PORTFOLIO
+
+====================================================
+
+Luxury gallery
+
+Category filtering
+
+Fullscreen viewing
+
+Image optimization
+
+====================================================
+
+CONTACT
+
+====================================================
+
+Booking Form
+
+Fields:
+
+Full Name
+
+Phone Number
+
+Email
+
+Event Type
+
+Event Date
+
+Venue
+
+Guest Count
+
+Budget
+
+Additional Notes
+
+In Demo Mode:
+
+Display a success message only.
+
+Mention clearly in the documentation that Telegram integration will be connected later.
+
+====================================================
+
+CHAT
+
+====================================================
+
+Create only a UI placeholder.
+
+The interface should look complete.
+
+When Send is clicked:
+
+Display:
+
+"Demo Mode — Live chat will be activated after deployment."
+
+====================================================
+
+RESPONSIVENESS
+
+====================================================
+
+Desktop
+
+Tablet
+
+Mobile
+
+All layouts must be fully responsive.
+
+====================================================
+
+PERFORMANCE
+
+====================================================
+
+Optimize for fast loading.
+
+Lazy load images.
+
+Optimize animations.
+
+Use semantic HTML.
+
+Accessibility should be considered.
+
+====================================================
+
+PROJECT DOCUMENTATION
+
+====================================================
+
+Before writing production code, generate and maintain:
+
+PRD.md
+
+ARCHITECTURE.md
+
+TECHSTACK.md
+
+RULES.md
+
+PROGRESS.md
+
+ROADMAP.md
+
+API.md
+
+IMPLEMENTATION.md
+
+Every future change must update the relevant document.
+
+====================================================
+
+DEVELOPMENT RULES
+
+====================================================
+
+Never break responsiveness.
+
+Never sacrifice performance for unnecessary effects.
+
+Keep code modular.
+
+Comment complex logic.
+
+Maintain clean folder structure.
+
+Design for future scalability.
+
+====================================================
+
+SUCCESS CRITERIA
+
+====================================================
+
+The finished website should immediately give visitors the impression that Herkinx Events is a luxury event brand.
+
+Every section should build trust.
+
+Every interaction should feel intentional.
+
+Every animation should enhance the experience.
+
+The architecture should support future backend integration with Cloudflare Workers, Telegram Bot API, live chat, booking management, and temporary conversation storage without requiring a redesign.

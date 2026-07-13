@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Event | Herkinx Events</title>
+  <meta name="description" content="Book your luxury event with Herkinx Events. Fill out our booking form to get started on creating an unforgettable experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ffffff',
+            secondary: '#000000',
+            accent: '#f5f5f5',
+            gold: '#d4af37',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #000; background: #ffffff; overflow-x: hidden; }
+    .font-display { font-family: 'Playfair Display', serif; }
+
+    /* Nav */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+      background: #d4af37; transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Mobile menu */
+    .mobile-menu {
+      transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+
+    /* Hero parallax */
+    .booking-hero {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                  url('images/booking-hero.jpg') center/cover no-repeat fixed;
+    }
+
+    /* Form inputs */
+    .form-input {
+      width: 100%; padding: 14px 18px; border: 1px solid #e5e5e5; border-radius: 6px;
+      font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #000;
+      background: #fafafa; transition: all 0.3s ease; outline: none;
+    }
+    .form-input:focus { border-color: #d4af37; background: #fff; box-shadow: 0 0 0 3px rgba(212,175,55,0.1); }
+    .form-input::placeholder { color: #999; }
+    textarea.form-input { resize: vertical; min-height: 120px; }
+    select.form-input { appearance: none; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px;
+    }
+
+    /* Gold underline */
+    .gold-underline { position: relative; display: inline-block; }
+    .gold-underline::after {
+      content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%);
+      width: 60px; height: 2px; background: #d4af37;
+    }
+
+    /* Checklist */
+    .check-item i { color: #d4af37; }
+
+    /* Process step */
+    .step-number {
+      width: 56px; height: 56px; border: 2px solid #d4af37; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700;
+      color: #d4af37; background: #fff; position: relative; z-index: 2;
+    }
+    .step-connector {
+      position: absolute; top: 28px; left: 56px; right: -56px; height: 2px;
+      background: #e5e5e5; z-index: 1;
+    }
+
+    /* Chat widget */
+    .chat-widget {
+      position: fixed; bottom: 24px; right: 24px; z-index: 999;
+      width: 60px; height: 60px; border-radius: 50%; background: #d4af37;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; box-shadow: 0 4px 20px rgba(212,175,55,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .chat-widget:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(212,175,55,0.5); }
+    .chat-widget i { color: #000; font-size: 1.4rem; }
+
+    /* Success overlay */
+    .success-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 10000;
+      display: none; align-items: center; justify-content: center;
+    }
+    .success-overlay.show { display: flex; }
+
+    /* Footer */
+    .footer-link { transition: color 0.3s ease; }
+    .footer-link:hover { color: #d4af37; }
+
+    /* Animations */
+    .fade-up { opacity: 0; transform: translateY(30px); }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="font-display text-2xl md:text-3xl font-bold text-white tracking-wide">Herkinx</span>
+        <span class="font-display text-2xl md:text-3xl font-light text-gold italic">Events</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="index.html" class="nav-link text-white text-sm font-medium tracking-wide hover:text-gold transition-colors">Home</a>
+        <a href="about.html" class="nav-link text-white text-sm font-medium tracking-wide hover:text-gold transition-colors">About</a>
+        <a href="services.html" class="nav-link text-white text-sm font-medium tracking-wide hover:text-gold transition-colors">Services</a>
+        <a href="portfolio.html" class="nav-link text-white text-sm font-medium tracking-wide hover:text-gold transition-colors">Portfolio</a>
+        <a href="testimonials.html" class="nav-link text-white text-sm font-medium tracking-wide hover:text-gold transition-colors">Testimonials</a>
+        <a href="faq.html" class="nav-link text-white text-sm font-medium tracking-wide hover:text-gold transition-colors">FAQ</a>
+        <a href="contact.html" class="nav-link text-white text-sm font-medium tracking-wide hover:text-gold transition-colors">Contact</a>
+        <a href="booking.html" class="ml-2 px-6 py-2.5 bg-gold text-black text-sm font-semibold rounded hover:bg-yellow-500 transition-colors">Book Now</a>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button id="menuToggle" class="lg:hidden text-white text-2xl focus:outline-none" aria-label="Toggle menu">
+        <i class="fas fa-bars" id="menuIcon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-y-0 right-0 w-80 bg-black/95 backdrop-blur-sm flex flex-col items-start pt-24 px-8 lg:hidden">
+      <button id="menuClose" class="absolute top-6 right-6 text-white text-2xl focus:outline-none" aria-label="Close menu">
+        <i class="fas fa-times"></i>
+      </button>
+      <nav class="flex flex-col gap-6 w-full">
+        <a href="index.html" class="text-white text-lg font-medium hover:text-gold transition-colors">Home</a>
+        <a href="about.html" class="text-white text-lg font-medium hover:text-gold transition-colors">About</a>
+        <a href="services.html" class="text-white text-lg font-medium hover:text-gold transition-colors">Services</a>
+        <a href="portfolio.html" class="text-white text-lg font-medium hover:text-gold transition-colors">Portfolio</a>
+        <a href="testimonials.html" class="text-white text-lg font-medium hover:text-gold transition-colors">Testimonials</a>
+        <a href="faq.html" class="text-white text-lg font-medium hover:text-gold transition-colors">FAQ</a>
+        <a href="contact.html" class="text-white text-lg font-medium hover:text-gold transition-colors">Contact</a>
+        <div class="w-full h-px bg-white/20 my-2"></div>
+        <a href="booking.html" class="inline-block text-center px-8 py-3 bg-gold text-black font-semibold rounded hover:bg-yellow-500 transition-colors">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="booking-hero relative min-h-[60vh] flex items-center justify-center text-center">
+    <div class="relative z-10 px-6 max-w-3xl mx-auto">
+      <p class="text-gold font-medium tracking-[4px] uppercase text-sm mb-4 fade-up">Reserve Your Date</p>
+      <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight fade-up">Book Your Event</h1>
+      <p class="text-white/80 text-lg md:text-xl font-light leading-relaxed fade-up">
+        Let us bring your vision to life. Fill out the form below and our team will be in touch within 24 hours.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== BOOKING FORM + SIDEBAR ========== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-3 gap-12">
+
+        <!-- Booking Form -->
+        <div class="lg:col-span-2 fade-up">
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-secondary mb-2">Event Booking Form</h2>
+          <p class="text-gray-500 mb-8">Fields marked with <span class="text-gold">*</span> are required.</p>
+
+          <form id="bookingForm" class="space-y-6" novalidate>
+            <div class="grid md:grid-cols-2 gap-6">
+              <!-- Full Name -->
+              <div>
+                <label for="fullName" class="block text-sm font-semibold text-secondary mb-2">Full Name <span class="text-gold">*</span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="John & Jane Doe" class="form-input" required>
+              </div>
+              <!-- Phone -->
+              <div>
+                <label for="phone" class="block text-sm font-semibold text-secondary mb-2">Phone Number <span class="text-gold">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" class="form-input" required>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-sm font-semibold text-secondary mb-2">Email Address <span class="text-gold">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" class="form-input" required>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <!-- Event Type -->
+              <div>
+                <label for="eventType" class="block text-sm font-semibold text-secondary mb-2">Event Type <span class="text-gold">*</span></label>
+                <select id="eventType" name="eventType" class="form-input" required>
+                  <option value="" disabled selected>Select event type</option>
+                  <option value="wedding">Wedding</option>
+                  <option value="corporate-gala">Corporate Gala</option>
+                  <option value="birthday">Birthday Celebration</option>
+                  <option value="anniversary">Anniversary Party</option>
+                  <option value="baby-shower">Baby Shower</option>
+                  <option value="engagement">Engagement Party</option>
+                  <option value="graduation">Graduation Party</option>
+                  <option value="holiday-party">Holiday Party</option>
+                  <option value="product-launch">Product Launch</option>
+                  <option value="fundraiser">Fundraiser / Charity Event</option>
+                  <option value="reunion">Reunion</option>
+                  <option value="religious">Religious Ceremony</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <!-- Event Date -->
+              <div>
+                <label for="eventDate" class="block text-sm font-semibold text-secondary mb-2">Event Date <span class="text-gold">*</span></label>
+                <input type="date" id="eventDate" name="eventDate" class="form-input" required>
+              </div>
+            </div>
+
+            <!-- Venue -->
+            <div>
+              <label for="venue" class="block text-sm font-semibold text-secondary mb-2">Venue / Location</label>
+              <input type="text" id="venue" name="venue" placeholder="Venue name or address" class="form-input">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <!-- Guest Count -->
+              <div>
+                <label for="guestCount" class="block text-sm font-semibold text-secondary mb-2">Estimated Guest Count <span class="text-gold">*</span></label>
+                <input type="number" id="guestCount" name="guestCount" placeholder="e.g. 150" min="1" class="form-input" required>
+              </div>
+              <!-- Budget -->
+              <div>
+                <label for="budget" class="block text-sm font-semibold text-secondary mb-2">Budget Range</label>
+                <select id="budget" name="budget" class="form-input">
+                  <option value="" disabled selected>Select budget range</option>
+                  <option value="under-5k">Under $5,000</option>
+                  <option value="5k-10k">$5,000 - $10,000</option>
+                  <option value="10k-25k">$10,000 - $25,000</option>
+                  <option value="25k-50k">$25,000 - $50,000</option>
+                  <option value="50k-100k">$50,000 - $100,000</option>
+                  <option value="100k-plus">$100,000+</option>
+                  <option value="not-sure">Not Sure Yet</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Notes -->
+            <div>
+              <label for="notes" class="block text-sm font-semibold text-secondary mb-2">Additional Notes</label>
+              <textarea id="notes" name="notes" rows="5" placeholder="Tell us about your vision, theme preferences, special requests, or any questions..." class="form-input"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="pt-4">
+              <button type="submit" id="submitBtn" class="w-full md:w-auto px-12 py-4 bg-gold text-black font-bold text-lg rounded hover:bg-yellow-500 transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 flex items-center justify-center gap-3">
+                <span>Submit Booking Request</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1 space-y-8">
+
+          <!-- Why Book With Us -->
+          <div class="bg-accent rounded-xl p-8 fade-up">
+            <h3 class="font-display text-2xl font-bold text-secondary mb-6">Why Book With Us?</h3>
+            <ul class="space-y-4">
+              <li class="check-item flex items-start gap-3">
+                <i class="fas fa-check-circle mt-0.5 text-lg"></i>
+                <span class="text-gray-700 text-sm leading-relaxed">10+ years of luxury event experience</span>
+              </li>
+              <li class="check-item flex items-start gap-3">
+                <i class="fas fa-check-circle mt-0.5 text-lg"></i>
+                <span class="text-gray-700 text-sm leading-relaxed">Full-service design, planning & execution</span>
+              </li>
+              <li class="check-item flex items-start gap-3">
+                <i class="fas fa-check-circle mt-0.5 text-lg"></i>
+                <span class="text-gray-700 text-sm leading-relaxed">Exclusive vendor partnerships & discounts</span>
+              </li>
+              <li class="check-item flex items-start gap-3">
+                <i class="fas fa-check-circle mt-0.5 text-lg"></i>
+                <span class="text-gray-700 text-sm leading-relaxed">Dedicated event coordinator assigned</span>
+              </li>
+              <li class="check-item flex items-start gap-3">
+                <i class="fas fa-check-circle mt-0.5 text-lg"></i>
+                <span class="text-gray-700 text-sm leading-relaxed">Transparent pricing, no hidden fees</span>
+              </li>
+              <li class="check-item flex items-start gap-3">
+                <i class="fas fa-check-circle mt-0.5 text-lg"></i>
+                <span class="text-gray-700 text-sm leading-relaxed">500+ successful events and counting</span>
+              </li>
+              <li class="check-item flex items-start gap-3">
+                <i class="fas fa-check-circle mt-0.5 text-lg"></i>
+                <span class="text-gray-700 text-sm leading-relaxed">100% satisfaction guarantee</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick Contact -->
+          <div class="bg-secondary rounded-xl p-8 fade-up">
+            <h3 class="font-display text-xl font-bold text-white mb-4">Need Immediate Help?</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">Our team is available 7 days a week to assist you.</p>
+            <div class="space-y-4">
+              <a href="tel:+15551234567" class="flex items-center gap-3 text-white hover:text-gold transition-colors">
+                <i class="fas fa-phone text-gold"></i>
+                <span class="text-sm">+1 (555) 123-4567</span>
+              </a>
+              <a href="mailto:hello@herkinxevents.com" class="flex items-center gap-3 text-white hover:text-gold transition-colors">
+                <i class="fas fa-envelope text-gold"></i>
+                <span class="text-sm">hello@herkinxevents.com</span>
+              </a>
+              <div class="flex items-center gap-3 text-white">
+                <i class="fas fa-clock text-gold"></i>
+                <span class="text-sm">Mon - Sun: 9AM - 9PM</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="py-20 bg-accent">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-gold font-medium tracking-[4px] uppercase text-sm mb-4 fade-up">The Process</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold text-secondary mb-4 fade-up">How It Works</h2>
+      <p class="text-gray-500 max-w-2xl mx-auto mb-16 text-lg fade-up">From your first inquiry to the final celebration, we make the process seamless and enjoyable.</p>
+
+      <div class="grid md:grid-cols-4 gap-8 relative">
+        <!-- Connector line (desktop) -->
+        <div class="hidden md:block absolute top-[28px] left-[calc(14%+28px)] right-[calc(14%+28px)] h-[2px] bg-gold/30"></div>
+
+        <!-- Step 1 -->
+        <div class="relative flex flex-col items-center fade-up">
+          <div class="step-number mb-6">1</div>
+          <h4 class="font-display text-lg font-bold text-secondary mb-2">Submit Inquiry</h4>
+          <p class="text-gray-500 text-sm leading-relaxed px-4">Fill out the booking form with your event details and vision.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="relative flex flex-col items-center fade-up">
+          <div class="step-number mb-6">2</div>
+          <h4 class="font-display text-lg font-bold text-secondary mb-2">Consultation</h4>
+          <p class="text-gray-500 text-sm leading-relaxed px-4">We schedule a free consultation to discuss your dream event.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="relative flex flex-col items-center fade-up">
+          <div class="step-number mb-6">3</div>
+          <h4 class="font-display text-lg font-bold text-secondary mb-2">Custom Proposal</h4>
+          <p class="text-gray-500 text-sm leading-relaxed px-4">Receive a tailored proposal with design concepts and pricing.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="relative flex flex-col items-center fade-up">
+          <div class="step-number mb-6">4</div>
+          <h4 class="font-display text-lg font-bold text-secondary mb-2">Celebrate</h4>
+          <p class="text-gray-500 text-sm leading-relaxed px-4">We handle every detail while you enjoy your perfect day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIAL QUOTE ========== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center fade-up">
+      <i class="fas fa-quote-left text-gold/30 text-5xl mb-6"></i>
+      <blockquote class="font-display text-2xl md:text-3xl italic text-secondary leading-relaxed mb-8">
+        "Herkinx Events turned our wedding into something out of a fairy tale. Every detail was meticulously crafted, and our guests are still raving about it months later. Worth every penny."
+      </blockquote>
+      <div class="flex items-center justify-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center">
+          <span class="font-display text-gold font-bold text-lg">S</span>
+        </div>
+        <div class="text-left">
+          <p class="font-semibold text-secondary">Sarah & Michael T.</p>
+          <p class="text-gray-500 text-sm">Wedding, October 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-secondary text-white pt-20 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
+        <!-- Brand -->
+        <div class="md:col-span-1">
+          <a href="index.html" class="flex items-center gap-2 mb-6">
+            <span class="font-display text-2xl font-bold text-white">Herkinx</span>
+            <span class="font-display text-2xl font-light text-gold italic">Events</span>
+          </a>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">Crafting unforgettable luxury experiences for every occasion since 2014.</p>
+          <div class="flex items-center gap-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-black transition-all" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-black transition-all" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-black transition-all" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-black transition-all" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-display text-lg font-bold mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="footer-link text-gray-400 text-sm">About Us</a></li>
+            <li><a href="services.html" class="footer-link text-gray-400 text-sm">Services</a></li>
+            <li><a href="portfolio.html" class="footer-link text-gray-400 text-sm">Portfolio</a></li>
+            <li><a href="testimonials.html" class="footer-link text-gray-400 text-sm">Testimonials</a></li>
+            <li><a href="faq.html" class="footer-link text-gray-400 text-sm">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="font-display text-lg font-bold mb-6">Services</h4>
+          <ul class="space-y-3">
+            <li><a href="services.html" class="footer-link text-gray-400 text-sm">Wedding Decor</a></li>
+            <li><a href="services.html" class="footer-link text-gray-400 text-sm">Corporate Events</a></li>
+            <li><a href="services.html" class="footer-link text-gray-400 text-sm">Private Parties</a></li>
+            <li><a href="services.html" class="footer-link text-gray-400 text-sm">Floral Design</a></li>
+            <li><a href="services.html" class="footer-link text-gray-400 text-sm">Full Planning</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="font-display text-lg font-bold mb-6">Contact Us</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-gold mt-1"></i>
+              <span class="text-gray-400 text-sm">123 Luxury Avenue<br>New York, NY 10001</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-gold"></i>
+              <a href="tel:+15551234567" class="footer-link text-gray-400 text-sm">+1 (555) 123-4567</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-gold"></i>
+              <a href="mailto:hello@herkinxevents.com" class="footer-link text-gray-400 text-sm">hello@herkinxevents.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-500 text-sm">&copy; 2026 Herkinx Events. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="footer-link text-gray-500 text-sm hover:text-gold">Privacy Policy</a>
+          <a href="#" class="footer-link text-gray-500 text-sm hover:text-gold">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== CHAT WIDGET ========== -->
+  <div class="chat-widget" id="chatWidget" title="Chat with us">
+    <i class="fas fa-comments"></i>
+  </div>
+
+  <!-- ========== SUCCESS OVERLAY ========== -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="bg-white rounded-2xl p-10 max-w-md mx-6 text-center shadow-2xl relative">
+      <button id="closeSuccess" class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl focus:outline-none" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="w-20 h-20 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-6">
+        <i class="fas fa-check text-gold text-3xl"></i>
+      </div>
+      <h3 class="font-display text-2xl font-bold text-secondary mb-3">Booking Submitted!</h3>
+      <p class="text-gray-500 leading-relaxed mb-6">Thank you for your inquiry. Our team will review your details and reach out within 24 hours to schedule your complimentary consultation.</p>
+      <button id="closeSuccessBtn" class="px-8 py-3 bg-gold text-black font-semibold rounded hover:bg-yellow-500 transition-colors">
+        Got It
+      </button>
+    </div>
+  </div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    // ---- Navbar scroll effect ----
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(0,0,0,0.92)';
+        navbar.style.backdropFilter = 'blur(12px)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+      } else {
+        navbar.style.background = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.boxShadow = 'none';
+      }
+    });
+    window.dispatchEvent(new Event('scroll'));
+
+    // ---- Mobile menu ----
+    const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      menuIcon.classList.replace('fa-bars', 'fa-times');
+    });
+    menuClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuIcon.classList.replace('fa-times', 'fa-bars');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuIcon.classList.replace('fa-times', 'fa-bars');
+      });
+    });
+
+    // ---- GSAP animations ----
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.fade-up').forEach(el => {
+      gsap.fromTo(el,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+        }
+      );
+    });
+
+    // ---- Set min date on date picker ----
+    const dateInput = document.getElementById('eventDate');
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    dateInput.setAttribute('min', `${yyyy}-${mm}-${dd}`);
+
+    // ---- Form submit (demo) ----
+    const bookingForm = document.getElementById('bookingForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successOverlay = document.getElementById('successOverlay');
+    const closeSuccess = document.getElementById('closeSuccess');
+    const closeSuccessBtn = document.getElementById('closeSuccessBtn');
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Basic validation
+      const required = bookingForm.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = '#e53e3e';
+          field.addEventListener('input', () => { field.style.borderColor = '#e5e5e5'; }, { once: true });
+        }
+      });
+      if (!valid) return;
+
+      // Simulate submission
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Submit Booking Request</span><i class="fas fa-arrow-right"></i>';
+        bookingForm.reset();
+        successOverlay.classList.add('show');
+      }, 1500);
+    });
+
+    // Close success overlay
+    [closeSuccess, closeSuccessBtn].forEach(btn => {
+      btn.addEventListener('click', () => successOverlay.classList.remove('show'));
+    });
+    successOverlay.addEventListener('click', (e) => {
+      if (e.target === successOverlay) successOverlay.classList.remove('show');
+    });
+
+    // ---- Chat widget placeholder ----
+    document.getElementById('chatWidget').addEventListener('click', () => {
+      alert('Live chat coming soon! For now, reach us at hello@herkinxevents.com');
+    });
+  </script>
+
+</body>
+</html>

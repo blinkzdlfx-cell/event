@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Herkinx Events</title>
+    <meta name="description" content="Explore our premium event decoration services for weddings, birthdays, corporate events and more.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ffffff',
+                        'secondary': '#000000',
+                        'accent': '#f5f5f5',
+                        'gold': '#d4af37',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-primary text-secondary">
+    <!-- Header -->
+    <header id="header" class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="font-display text-2xl font-bold">
+                        HERKINX <span class="text-gold">EVENTS</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-secondary hover:text-gold transition-colors">Home</a>
+                    <a href="about.html" class="text-secondary hover:text-gold transition-colors">About</a>
+                    <a href="services.html" class="text-secondary hover:text-gold transition-colors">Services</a>
+                    <a href="portfolio.html" class="text-secondary hover:text-gold transition-colors">Portfolio</a>
+                    <a href="testimonials.html" class="text-secondary hover:text-gold transition-colors">Testimonials</a>
+                    <a href="faq.html" class="text-secondary hover:text-gold transition-colors">FAQ</a>
+                    <a href="contact.html" class="text-secondary hover:text-gold transition-colors">Contact</a>
+                </nav>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="booking.html" class="bg-secondary text-white px-6 py-3 font-medium hover:bg-gold transition-colors">
+                        Book Now
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-secondary">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block py-2 text-secondary hover:text-gold">Home</a>
+                <a href="about.html" class="block py-2 text-secondary hover:text-gold">About</a>
+                <a href="services.html" class="block py-2 text-secondary hover:text-gold">Services</a>
+                <a href="portfolio.html" class="block py-2 text-secondary hover:text-gold">Portfolio</a>
+                <a href="testimonials.html" class="block py-2 text-secondary hover:text-gold">Testimonials</a>
+                <a href="faq.html" class="block py-2 text-secondary hover:text-gold">FAQ</a>
+                <a href="contact.html" class="block py-2 text-secondary hover:text-gold">Contact</a>
+                <a href="booking.html" class="block py-3 bg-secondary text-white text-center font-medium hover:bg-gold">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-96 flex items-center justify-center">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <div class="absolute inset-0">
+                <img src="assets/images/services-hero.jpg" alt="Our Services" class="w-full h-full object-cover">
+            </div>
+            
+            <!-- Content -->
+            <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6">
+                    Our Services
+                </h1>
+                <p class="text-xl text-gray-200">
+                    Comprehensive luxury event decoration for every occasion
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Grid Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-on-scroll">
+                    <h2 class="font-display text-4xl font-bold mb-4">Premium Event Decoration</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                        We offer a wide range of luxury decoration services tailored to your specific needs and preferences.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1: Wedding Decoration -->
+                    <div id="wedding" class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="assets/images/services/wedding.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-heart text-gold mr-2"></i>
+                                <span class="text-sm text-gray-500">Most Popular</span>
+                            </div>
+                            <h3 class="font-display text-xl font-semibold mb-2">Wedding Decoration</h3>
+                            <p class="text-gray-600 mb-4">Creating magical moments for your special day with elegant and sophisticated decoration that reflects your love story.</p>
+                            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                                <li><i class="fas fa-check text-gold mr-2"></i>Ceremony Setup</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Reception Decoration</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Stage Design</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Table Styling</li>
+                            </ul>
+                            <a href="booking.html" class="text-gold font-semibold hover:text-yellow-600 transition-colors inline-flex items-center">
+                                Book Now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 2: Traditional Marriage -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="assets/images/services/traditional.jpg" alt="Traditional Marriage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-semibold mb-2">Traditional Marriage</h3>
+                            <p class="text-gray-600 mb-4">Authentic and culturally inspired decoration for traditional marriage ceremonies and celebrations.</p>
+                            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                                <li><i class="fas fa-check text-gold mr-2"></i>Cultural Themes</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Color Coordination</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Traditional Elements</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Modern Touches</li>
+                            </ul>
+                            <a href="booking.html" class="text-gold font-semibold hover:text-yellow-600 transition-colors inline-flex items-center">
+                                Book Now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 3: Birthday Decoration -->
+                    <div id="birthday" class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="assets/images/services/birthday.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-semibold mb-2">Birthday Decoration</h3>
+                            <p class="text-gray-600 mb-4">Making your birthday celebration unforgettable with creative and themed decorations for all ages.</p>
+                            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                                <li><i class="fas fa-check text-gold mr-2"></i>Themed Parties</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Balloon Decor</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Photo Backdrops</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Table Settings</li>
+                            </ul>
+                            <a href="booking.html" class="text-gold font-semibold hover:text-yellow-600 transition-colors inline-flex items-center">
+                                Book Now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 4: Corporate Events -->
+                    <div id="corporate" class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="assets/images/services/corporate.jpg" alt="Corporate Events" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-semibold mb-2">Corporate Events</h3>
+                            <p class="text-gray-600 mb-4">Professional and sophisticated decoration for corporate events, galas, and business functions.</p>
+                            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                                <li><i class="fas fa-check text-gold mr-2"></i>Brand Integration</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Professional Setup</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Stage Design</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Lighting Effects</li>
+                            </ul>
+                            <a href="booking.html" class="text-gold font-semibold hover:text-yellow-600 transition-colors inline-flex items-center">
+                                Book Now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 5: Proposal Decoration -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="assets/images/services/proposal.jpg" alt="Proposal Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-semibold mb-2">Proposal Decoration</h3>
+                            <p class="text-gray-600 mb-4">Romantic and intimate decoration for your perfect proposal moment.</p>
+                            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                                <li><i class="fas fa-check text-gold mr-2"></i>Romantic Setup</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Floral Arrangements</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Lighting Design</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Photo Setup</li>
+                            </ul>
+                            <a href="booking.html" class="text-gold font-semibold hover:text-yellow-600 transition-colors inline-flex items-center">
+                                Book Now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 6: Engagement Decoration -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="assets/images/services/engagement.jpg" alt="Engagement Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-semibold mb-2">Engagement Decoration</h3>
+                            <p class="text-gray-600 mb-4">Celebrating your commitment with elegant engagement party decoration.</p>
+                            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                                <li><i class="fas fa-check text-gold mr-2"></i>Elegant Themes</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Centerpieces</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Backdrop Design</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Ambient Lighting</li>
+                            </ul>
+                            <a href="booking.html" class="text-gold font-semibold hover:text-yellow-600 transition-colors inline-flex items-center">
+                                Book Now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 7: Bridal Shower -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="assets/images/services/bridal-shower.jpg" alt="Bridal Shower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-semibold mb-2">Bridal Shower</h3>
+                            <p class="text-gray-600 mb-4">Beautiful and feminine decoration for the perfect bridal shower celebration.</p>
+                            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                                <li><i class="fas fa-check text-gold mr-2"></i>Floral Themes</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Decorative Props</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Table Styling</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Photo Areas</li>
+                            </ul>
+                            <a href="booking.html" class="text-gold font-semibold hover:text-yellow-600 transition-colors inline-flex items-center">
+                                Book Now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 8: Baby Shower -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="assets/images/services/baby-shower.jpg" alt="Baby Shower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-semibold mb-2">Baby Shower</h3>
+                            <p class="text-gray-600 mb-4">Adorable and themed decoration for celebrating the upcoming arrival.</p>
+                            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                                <li><i class="fas fa-check text-gold mr-2"></i>Gender Themes</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Balloon Arches</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Table Decor</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Gift Areas</li>
+                            </ul>
+                            <a href="booking.html" class="text-gold font-semibold hover:text-yellow-600 transition-colors inline-flex items-center">
+                                Book Now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 9: Anniversary Decoration -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="assets/images/services/anniversary.jpg" alt="Anniversary Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-semibold mb-2">Anniversary Decoration</h3>
+                            <p class="text-gray-600 mb-4">Celebrating love milestones with elegant and romantic decoration.</p>
+                            <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                                <li><i class="fas fa-check text-gold mr-2"></i>Romantic Themes</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Photo Displays</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Elegant Centerpieces</li>
+                                <li><i class="fas fa-check text-gold mr-2"></i>Memory Walls</li>
+                            </ul>
+                            <a href="booking.html" class="text-gold font-semibold hover:text-yellow-600 transition-colors inline-flex items-center">
+                                Book Now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Services Section -->
+        <section class="py-20 bg-accent">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-on-scroll">
+                    <h2 class="font-display text-4xl font-bold mb-4">Specialized Decoration</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                        Additional services to enhance your event experience
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center animate-on-scroll">
+                        <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-church text-gold text-2xl"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold mb-2">Church Decoration</h3>
+                        <p class="text-gray-600 text-sm">Sacred and beautiful decoration for church events and ceremonies.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center animate-on-scroll">
+                        <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-graduation-cap text-gold text-2xl"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold mb-2">Graduation Parties</h3>
+                        <p class="text-gray-600 text-sm">Celebrating academic achievements with festive decoration.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center animate-on-scroll">
+                        <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tree text-gold text-2xl"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold mb-2">Outdoor Events</h3>
+                        <p class="text-gray-600 text-sm">Weather-appropriate decoration for outdoor celebrations.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center animate-on-scroll">
+                        <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-home text-gold text-2xl"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold mb-2">Indoor Events</h3>
+                        <p class="text-gray-600 text-sm">Intimate and cozy decoration for indoor venues.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-on-scroll">
+                    <h2 class="font-display text-4xl font-bold mb-4">Our Process</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                        How we bring your vision to life
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center animate-on-scroll">
+                        <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-white font-bold text-xl">1</span>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold mb-2">Consultation</h3>
+                        <p class="text-gray-600">We discuss your vision, preferences, and event details to understand your needs.</p>
+                    </div>
+                    
+                    <div class="text-center animate-on-scroll">
+                        <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-white font-bold text-xl">2</span>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold mb-2">Design</h3>
+                        <p class="text-gray-600">Our team creates custom designs and proposals tailored to your event.</p>
+                    </div>
+                    
+                    <div class="text-center animate-on-scroll">
+                        <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-white font-bold text-xl">3</span>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold mb-2">Setup</h3>
+                        <p class="text-gray-600">Professional installation and decoration on your event day.</p>
+                    </div>
+                    
+                    <div class="text-center animate-on-scroll">
+                        <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-white font-bold text-xl">4</span>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold mb-2">Enjoy</h3>
+                        <p class="text-gray-600">Relax and enjoy your beautifully decorated event.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-secondary text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-display text-4xl font-bold mb-4 animate-on-scroll">Ready to Book Your Event?</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-on-scroll">
+                    Let us create something beautiful for your special occasion. Contact us today for a free consultation.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll">
+                    <a href="booking.html" class="bg-gold text-white px-8 py-4 font-semibold hover:bg-yellow-600 transition-colors">
+                        Book Your Event
+                    </a>
+                    <a href="contact.html" class="border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-secondary transition-colors">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="font-display text-2xl font-bold mb-4">
+                        HERKINX <span class="text-gold">EVENTS</span>
+                    </h3>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Transforming ordinary venues into extraordinary experiences. 
+                        Luxury in every detail.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors">
+                            <i class="fab fa-pinterest text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-display text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-gold transition-colors">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-gold transition-colors">Portfolio</a></li>
+                        <li><a href="testimonials.html" class="text-gray-300 hover:text-gold transition-colors">Testimonials</a></li>
+                        <li><a href="faq.html" class="text-gray-300 hover:text-gold transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-display text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-gold"></i>
+                            <span class="text-gray-300">Lagos, Nigeria</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-gold"></i>
+                            <span class="text-gray-300">+234 801 234 5678</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-gold"></i>
+                            <span class="text-gray-300">info@herkinevents.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2026 Herkinx Events. All rights reserved. | 
+                    <span class="text-gold">Luxury In Every Detail</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
