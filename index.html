@@ -49,8 +49,9 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="font-display text-2xl font-bold">
-                        HERKINX <span class="text-gold">EVENTS</span>
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-10 w-auto">
+                        <span class="font-display text-xl font-bold hidden sm:block">HERKINX <span class="text-gold">EVENTS</span></span>
                     </a>
                 </div>
                 
@@ -74,7 +75,7 @@
                 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-secondary">
+                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -82,8 +83,8 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-4 space-y-3">
+        <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 z-50 w-80 bg-white border-l shadow-2xl">
+            <div class="px-4 py-6 space-y-3 pt-16">
                 <a href="index.html" class="block py-2 text-secondary hover:text-gold">Home</a>
                 <a href="about.html" class="block py-2 text-secondary hover:text-gold">About</a>
                 <a href="services.html" class="block py-2 text-secondary hover:text-gold">Services</a>
@@ -493,9 +494,10 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <!-- Company Info -->
                 <div class="col-span-1 md:col-span-2">
-                    <h3 class="font-display text-2xl font-bold mb-4">
-                        HERKINX <span class="text-gold">EVENTS</span>
-                    </h3>
+                    <a href="index.html" class="inline-flex items-center gap-2 mb-4">
+                        <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-12 w-auto">
+                        <span class="font-display text-2xl font-bold">HERKINX <span class="text-gold">EVENTS</span></span>
+                    </a>
                     <p class="text-gray-300 mb-6 max-w-md">
                         Transforming ordinary venues into extraordinary experiences. 
                         Luxury in every detail.
