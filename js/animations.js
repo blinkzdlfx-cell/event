@@ -60,8 +60,8 @@ function initTextReveal() {
 
 // Counter animations
 function initCounters() {
-  gsap.utils.toArray('.stat-number[data-count]').forEach(counter => {
-    const target = parseInt(counter.getAttribute('data-count'), 10);
+  gsap.utils.toArray('.counter[data-target]').forEach(counter => {
+    const target = parseFloat(counter.getAttribute('data-target'));
     
     ScrollTrigger.create({
       trigger: counter,
@@ -72,10 +72,11 @@ function initCounters() {
           duration: 2,
           ease: 'power2.out',
           onUpdate: function() {
-            counter.textContent = Math.floor(this.targets()[0].value).toLocaleString();
+            const val = this.targets()[0].value;
+            counter.textContent = Number.isInteger(target) ? Math.floor(val).toLocaleString() : val.toFixed(1);
           },
           onComplete: () => {
-            counter.textContent = target.toLocaleString();
+            counter.textContent = Number.isInteger(target) ? target.toLocaleString() : target.toFixed(1);
           }
         });
       },
