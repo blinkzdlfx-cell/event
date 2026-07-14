@@ -198,6 +198,49 @@ GET /testimonials?limit=10
 }
 ```
 
+## Chat Widget Integration
+
+The chat widget (`js/chat.js`) is designed for easy Telegram bot or custom backend integration.
+
+### Configuration (`ChatConfig` at top of chat.js)
+
+```javascript
+const ChatConfig = {
+  mode: 'demo',                    // 'demo' | 'production'
+  endpoint: '',                    // Custom backend URL
+  telegramBotToken: '',            // Telegram bot token
+  telegramChatId: '',              // Telegram chat ID
+  botDelay: 1500,                  // Typing delay in ms (demo only)
+};
+```
+
+### Step-by-step: Switch to Production
+
+1. **Set mode to `'production'`** — this enables `sendToBackend()` instead of the demo `getBotResponse()`.
+
+2. **Choose integration method:**
+
+   **Option A — Telegram Bot (direct from browser)**
+   ```javascript
+   ChatConfig.mode = 'production';
+   ChatConfig.telegramBotToken = '123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11';
+   ChatConfig.telegramChatId = '-1001234567890';
+   ```
+   Messages will be sent directly to Telegram via the Bot API. No server needed.
+
+   **Option B — Custom Backend**
+   ```javascript
+   ChatConfig.mode = 'production';
+   ChatConfig.endpoint = 'https://api.herkinevents.com/v1/chat';
+   ```
+   The `sendToBackend()` function POSTs to your endpoint and expects a JSON response with a `reply` field.
+
+3. **Optional: Customize `sendToBackend()`** — Open `js/chat.js` and edit the function to match your API contract.
+
+### Demo Mode (Default)
+
+In demo mode (`ChatConfig.mode = 'demo'`), the widget simulates replies using keyword matching in `getBotResponse()`. No network calls are made.
+
 ## Webhook Integration
 
 ### Telegram Bot Webhook
