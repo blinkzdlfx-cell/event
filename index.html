@@ -6,6 +6,21 @@
     <title>Herkinx Events - Luxury Event Decoration</title>
     <meta name="description" content="Premium event decoration services for weddings, birthdays, corporate events and more. Luxury in every detail.">
     
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Herkinx Events - Luxury Event Decoration">
+    <meta property="og:description" content="Premium event decoration services for weddings, birthdays, corporate events and more. Luxury in every detail.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herkinevents.com/index.html">
+    <meta property="og:site_name" content="Herkinx Events">
+    <meta property="og:image" content="https://herkinevents.com/assets/images/hero/hero-1.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://herkinevents.com/index.html">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -41,8 +56,29 @@
             }
         }
     </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Herkinx Events",
+      "description": "Premium event decoration services for weddings, birthdays, corporate events and more.",
+      "url": "https://herkinevents.com",
+      "telephone": "+2348012345678",
+      "email": "info@herkinevents.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lagos",
+        "addressCountry": "NG"
+      },
+      "priceRange": "$$$$",
+      "openingHours": "Mo-Su 09:00-21:00"
+    }
+    </script>
 </head>
 <body class="font-body bg-primary text-secondary">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-gold focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip to main content</a>
     <!-- Header -->
     <header id="header" class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,7 +111,7 @@
                 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu">
+                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu" aria-expanded="false">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -98,7 +134,7 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="relative h-screen flex items-center justify-center">
             <!-- Background Image/Video -->
@@ -140,7 +176,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Image -->
                     <div class="relative animate-on-scroll">
-                        <img src="assets/images/about-preview.jpg" alt="Herkinx Events Team" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                        <img src="assets/images/about-preview.jpg" alt="Herkinx Events Team" class="w-full h-96 object-cover rounded-lg shadow-lg" loading="lazy">
                         <div class="absolute -bottom-6 -right-6 bg-gold text-white p-6 rounded-lg shadow-lg">
                             <div class="text-3xl font-bold font-display">10+</div>
                             <div class="text-sm">Years Experience</div>
@@ -178,7 +214,7 @@
                     <!-- Service Card 1 -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/wedding.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/wedding.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -193,7 +229,7 @@
                     <!-- Service Card 2 -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/corporate.jpg" alt="Corporate Events" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/corporate.jpg" alt="Corporate Events" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -208,7 +244,7 @@
                     <!-- Service Card 3 -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/birthday.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/birthday.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -243,7 +279,7 @@
                     <!-- Portfolio Item 1 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="wedding">
                         <div class="relative h-80 overflow-hidden">
-                            <img src="assets/images/portfolio/wedding-001.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/wedding-001.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Elegant Wedding</h4>
@@ -259,7 +295,7 @@
                     <!-- Portfolio Item 2 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="corporate">
                         <div class="relative h-80 overflow-hidden">
-                            <img src="assets/images/portfolio/corporate-001.jpg" alt="Corporate Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/corporate-001.jpg" alt="Corporate Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Annual Gala</h4>
@@ -275,7 +311,7 @@
                     <!-- Portfolio Item 3 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="birthday">
                         <div class="relative h-80 overflow-hidden">
-                            <img src="assets/images/portfolio/birthday-001.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/birthday-001.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">50th Birthday</h4>
@@ -335,19 +371,19 @@
                     <!-- Testimonial 1 -->
                     <div class="bg-white p-8 rounded-lg shadow-lg animate-on-scroll">
                         <div class="flex items-center mb-4">
-                            <div class="text-gold">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            <div class="text-gold" aria-label="5 out of 5 stars" role="img">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-6 italic">
                             "Herkinx Events made our wedding absolutely perfect! The attention to detail was incredible, and every guest was amazed by the beautiful decorations."
                         </p>
                         <div class="flex items-center">
-                            <img src="assets/images/testimonials/client-1.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <img src="assets/images/testimonials/client-1.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy">
                             <div>
                                 <h4 class="font-semibold">Sarah Johnson</h4>
                                 <p class="text-gray-500 text-sm">Wedding, December 2023</p>
@@ -358,19 +394,19 @@
                     <!-- Testimonial 2 -->
                     <div class="bg-white p-8 rounded-lg shadow-lg animate-on-scroll">
                         <div class="flex items-center mb-4">
-                            <div class="text-gold">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            <div class="text-gold" aria-label="5 out of 5 stars" role="img">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-6 italic">
                             "Professional, creative, and absolutely stunning! Our corporate event was transformed into an elegant affair that impressed all our clients and partners."
                         </p>
                         <div class="flex items-center">
-                            <img src="assets/images/testimonials/client-2.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <img src="assets/images/testimonials/client-2.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy">
                             <div>
                                 <h4 class="font-semibold">Michael Chen</h4>
                                 <p class="text-gray-500 text-sm">Corporate Gala, November 2023</p>
@@ -381,19 +417,19 @@
                     <!-- Testimonial 3 -->
                     <div class="bg-white p-8 rounded-lg shadow-lg animate-on-scroll">
                         <div class="flex items-center mb-4">
-                            <div class="text-gold">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            <div class="text-gold" aria-label="5 out of 5 stars" role="img">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-6 italic">
                             "From the initial consultation to the final setup, Herkinx Events exceeded our expectations. My daughter's birthday party was a dream come true!"
                         </p>
                         <div class="flex items-center">
-                            <img src="assets/images/testimonials/client-3.jpg" alt="Amara Okafor" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <img src="assets/images/testimonials/client-3.jpg" alt="Amara Okafor" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy">
                             <div>
                                 <h4 class="font-semibold">Amara Okafor</h4>
                                 <p class="text-gray-500 text-sm">Birthday Party, October 2023</p>
@@ -441,44 +477,44 @@
                     <p class="text-gray-600 max-w-2xl mx-auto text-lg">
                         Stay updated with our latest work and get inspired for your next event.
                     </p>
-                    <a href="https://instagram.com/herkinevents" class="inline-flex items-center text-gold font-semibold hover:text-yellow-600 transition-colors mt-4">
+                    <a href="https://instagram.com/herkinevents" class="inline-flex items-center text-gold font-semibold hover:text-yellow-600 transition-colors mt-4" rel="noopener noreferrer" target="_blank">
                         @herkinevents <i class="fas fa-external-link-alt ml-2"></i>
                     </a>
                 </div>
                 
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                     <div class="relative group cursor-pointer animate-on-scroll">
-                        <img src="assets/images/instagram/insta-1.jpg" alt="Instagram Post" class="w-full h-48 object-cover rounded-lg">
+                        <img src="assets/images/instagram/insta-1.jpg" alt="Herkinx Events Instagram post - wedding decoration" class="w-full h-48 object-cover rounded-lg" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors rounded-lg flex items-center justify-center">
                             <i class="fab fa-instagram text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
                         </div>
                     </div>
                     <div class="relative group cursor-pointer animate-on-scroll">
-                        <img src="assets/images/instagram/insta-2.jpg" alt="Instagram Post" class="w-full h-48 object-cover rounded-lg">
+                        <img src="assets/images/instagram/insta-2.jpg" alt="Herkinx Events Instagram post - corporate event" class="w-full h-48 object-cover rounded-lg" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors rounded-lg flex items-center justify-center">
                             <i class="fab fa-instagram text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
                         </div>
                     </div>
                     <div class="relative group cursor-pointer animate-on-scroll">
-                        <img src="assets/images/instagram/insta-3.jpg" alt="Instagram Post" class="w-full h-48 object-cover rounded-lg">
+                        <img src="assets/images/instagram/insta-3.jpg" alt="Herkinx Events Instagram post - birthday celebration" class="w-full h-48 object-cover rounded-lg" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors rounded-lg flex items-center justify-center">
                             <i class="fab fa-instagram text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
                         </div>
                     </div>
                     <div class="relative group cursor-pointer animate-on-scroll">
-                        <img src="assets/images/instagram/insta-4.jpg" alt="Instagram Post" class="w-full h-48 object-cover rounded-lg">
+                        <img src="assets/images/instagram/insta-4.jpg" alt="Herkinx Events Instagram post - floral arrangements" class="w-full h-48 object-cover rounded-lg" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors rounded-lg flex items-center justify-center">
                             <i class="fab fa-instagram text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
                         </div>
                     </div>
                     <div class="relative group cursor-pointer animate-on-scroll">
-                        <img src="assets/images/instagram/insta-5.jpg" alt="Instagram Post" class="w-full h-48 object-cover rounded-lg">
+                        <img src="assets/images/instagram/insta-5.jpg" alt="Herkinx Events Instagram post - event styling" class="w-full h-48 object-cover rounded-lg" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors rounded-lg flex items-center justify-center">
                             <i class="fab fa-instagram text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
                         </div>
                     </div>
                     <div class="relative group cursor-pointer animate-on-scroll">
-                        <img src="assets/images/instagram/insta-6.jpg" alt="Instagram Post" class="w-full h-48 object-cover rounded-lg">
+                        <img src="assets/images/instagram/insta-6.jpg" alt="Herkinx Events Instagram post - luxury venue decoration" class="w-full h-48 object-cover rounded-lg" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors rounded-lg flex items-center justify-center">
                             <i class="fab fa-instagram text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
                         </div>
@@ -560,45 +596,29 @@
     </footer>
 
     <!-- Chat Widget -->
-    <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
-        <!-- Chat Button -->
-        <button id="chat-button" class="bg-secondary text-white w-16 h-16 rounded-full shadow-lg hover:bg-gold transition-colors flex items-center justify-center">
+    <div id="chat-widget" class="chat-widget">
+        <button id="chat-button" class="chat-button" aria-label="Open chat">
             <i class="fas fa-comments text-2xl"></i>
         </button>
-        
-        <!-- Chat Window -->
-        <div id="chat-window" class="hidden absolute bottom-20 right-0 w-80 bg-white rounded-lg shadow-2xl border">
-            <!-- Chat Header -->
-            <div class="bg-secondary text-white p-4 rounded-t-lg">
-                <div class="flex justify-between items-center">
+
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <div>
                     <h4 class="font-display font-semibold">Live Chat</h4>
-                    <button id="close-chat" class="text-gray-300 hover:text-white">
-                        <i class="fas fa-times"></i>
-                    </button>
+                    <p class="text-sm opacity-75">We typically reply within minutes</p>
                 </div>
-                <p class="text-sm text-gray-300">We typically reply within minutes</p>
+                <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
             </div>
-            
-            <!-- Chat Messages -->
-            <div id="chat-messages" class="h-64 overflow-y-auto p-4 space-y-4">
-                <div class="flex items-start space-x-2">
-                    <div class="w-8 h-8 bg-gold rounded-full flex items-center justify-center">
-                        <i class="fas fa-bot text-white text-sm"></i>
-                    </div>
-                    <div class="bg-accent rounded-lg p-3 max-w-xs">
-                        <p class="text-sm">Hello! How can we help you today?</p>
-                    </div>
+
+            <div id="chat-messages" class="chat-messages">
+                <div class="chat-message bot">
+                    <div class="message-bubble">Hello! How can we help you today?</div>
                 </div>
             </div>
-            
-            <!-- Chat Input -->
-            <div class="p-4 border-t">
-                <div class="flex space-x-2">
-                    <input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 border rounded-lg px-4 py-2 focus:outline-none focus:border-gold">
-                    <button id="send-message" class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-gold transition-colors">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." aria-label="Chat message">
+                <button id="chat-send" class="chat-send" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </div>

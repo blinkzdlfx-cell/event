@@ -3,19 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Your Event | Herkinx Events</title>
+  <title>Book Your Event - Herkinx Events</title>
   <meta name="description" content="Book your luxury event with Herkinx Events. Fill out our booking form to get started on creating an unforgettable experience.">
 
-  <!-- Fonts -->
+  <!-- Preconnect for Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Book Your Event - Herkinx Events">
+  <meta property="og:description" content="Book your luxury event with Herkinx Events. Fill out our booking form to get started on creating an unforgettable experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://herkinevents.com/booking.html">
+  <meta property="og:site_name" content="Herkinx Events">
+  <meta property="og:image" content="https://herkinevents.com/assets/images/hero/booking-hero.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://herkinevents.com/booking.html">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <!-- Tailwind Config -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -37,8 +54,30 @@
       },
     }
   </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Herkinx Events",
+    "description": "Premium event decoration services for weddings, birthdays, corporate events and more.",
+    "url": "https://herkinevents.com",
+    "telephone": "+2348012345678",
+    "email": "info@herkinevents.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lagos",
+      "addressCountry": "NG"
+    },
+    "priceRange": "$$$$",
+    "openingHours": "Mo-Su 09:00-21:00"
+  }
+  </script>
 </head>
 <body class="font-body bg-primary text-secondary">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-gold focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip to main content</a>
 
   <!-- ========== HEADER / NAVIGATION ========== -->
   <header id="header" class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md">
@@ -46,8 +85,9 @@
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
         <div class="flex-shrink-0">
-          <a href="index.html" class="font-display text-2xl font-bold">
-            HERKINX <span class="text-gold">EVENTS</span>
+          <a href="index.html" class="flex items-center gap-2">
+            <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-10 w-auto">
+            <span class="font-display text-xl font-bold hidden sm:block">HERKINX <span class="text-gold">EVENTS</span></span>
           </a>
         </div>
 
@@ -71,7 +111,7 @@
 
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-secondary" aria-label="Toggle menu">
+          <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu" aria-expanded="false">
             <i class="fas fa-bars text-2xl"></i>
           </button>
         </div>
@@ -93,11 +133,12 @@
     </div>
   </header>
 
+  <main id="main-content">
   <!-- ========== HERO SECTION ========== -->
   <section class="relative h-96 flex items-center justify-center">
     <div class="absolute inset-0 bg-black/50 z-10"></div>
     <div class="absolute inset-0">
-      <img src="assets/images/booking-hero.jpg" alt="Book Your Event" class="w-full h-full object-cover">
+      <img src="assets/images/hero/booking-hero.jpg" alt="Book Your Event" class="w-full h-full object-cover">
     </div>
 
     <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
@@ -254,13 +295,13 @@
             <h3 class="font-display text-xl font-bold text-white mb-4">Need Immediate Help?</h3>
             <p class="text-gray-400 text-sm leading-relaxed mb-6">Our team is available 7 days a week to assist you.</p>
             <div class="space-y-4">
-              <a href="tel:+15551234567" class="flex items-center gap-3 text-white hover:text-gold transition-colors">
+              <a href="tel:+2348012345678" class="flex items-center gap-3 text-white hover:text-gold transition-colors">
                 <i class="fas fa-phone text-gold"></i>
-                <span class="text-sm">+1 (555) 123-4567</span>
+                <span class="text-sm">+234 801 234 5678</span>
               </a>
-              <a href="mailto:hello@herkinxevents.com" class="flex items-center gap-3 text-white hover:text-gold transition-colors">
+              <a href="mailto:info@herkinevents.com" class="flex items-center gap-3 text-white hover:text-gold transition-colors">
                 <i class="fas fa-envelope text-gold"></i>
-                <span class="text-sm">hello@herkinxevents.com</span>
+                <span class="text-sm">info@herkinevents.com</span>
               </a>
               <div class="flex items-center gap-3 text-white">
                 <i class="fas fa-clock text-gold"></i>
@@ -310,7 +351,7 @@
   </section>
 
   <!-- ========== TESTIMONIAL QUOTE ========== -->
-  <section class="py-20 bg-white">
+  <section class="py-20 bg-accent">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
       <i class="fas fa-quote-left text-gold/30 text-5xl mb-6"></i>
       <blockquote class="font-display text-2xl md:text-3xl italic text-secondary leading-relaxed mb-8">
@@ -327,74 +368,78 @@
       </div>
     </div>
   </section>
+  </main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="footer-grid">
-        <!-- Brand -->
-        <div class="col-span-1 md:col-span-2 footer-brand">
-          <div class="logo">
-            HERKINX <span class="gold">EVENTS</span>
-          </div>
-          <p>Crafting unforgettable luxury experiences for every occasion since 2014.</p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-            <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-          </div>
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="inline-flex items-center gap-2 mb-4">
+                        <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-12 w-auto">
+                        <span class="font-display text-2xl font-bold">HERKINX <span class="text-gold">EVENTS</span></span>
+                    </a>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Transforming ordinary venues into extraordinary experiences. 
+                        Luxury in every detail.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors" aria-label="Pinterest">
+                            <i class="fab fa-pinterest text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-display text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-gold transition-colors">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-gold transition-colors">Portfolio</a></li>
+                        <li><a href="testimonials.html" class="text-gray-300 hover:text-gold transition-colors">Testimonials</a></li>
+                        <li><a href="faq.html" class="text-gray-300 hover:text-gold transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-display text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-gold"></i>
+                            <span class="text-gray-300">Lagos, Nigeria</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-gold"></i>
+                            <span class="text-gray-300">+234 801 234 5678</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-gold"></i>
+                            <span class="text-gray-300">info@herkinevents.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2026 Herkinx Events. All rights reserved. | 
+                    <span class="text-gold">Luxury In Every Detail</span>
+                </p>
+            </div>
         </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="services.html" class="footer-link">Services</a></li>
-            <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
-            <li><a href="testimonials.html" class="footer-link">Testimonials</a></li>
-            <li><a href="faq.html" class="footer-link">FAQ</a></li>
-          </ul>
-        </div>
-
-        <!-- Services -->
-        <div>
-          <h4 class="footer-title">Services</h4>
-          <ul class="footer-links">
-            <li><a href="services.html" class="footer-link">Wedding Decor</a></li>
-            <li><a href="services.html" class="footer-link">Corporate Events</a></li>
-            <li><a href="services.html" class="footer-link">Private Parties</a></li>
-            <li><a href="services.html" class="footer-link">Floral Design</a></li>
-            <li><a href="services.html" class="footer-link">Full Planning</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h4 class="footer-title">Contact Us</h4>
-          <ul class="footer-contact">
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span>123 Luxury Avenue<br>New York, NY 10001</span>
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              <a href="tel:+15551234567" class="footer-link">+1 (555) 123-4567</a>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:hello@herkinxevents.com" class="footer-link">hello@herkinxevents.com</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom text-center">
-        <p class="text-gray-400">&copy; 2026 Herkinx Events. All rights reserved. | <span class="gold">Luxury In Every Detail</span></p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
   <!-- Chat Widget -->
   <div id="chat-widget" class="chat-widget">

@@ -55,14 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const forms = document.querySelectorAll('form[data-form]');
 
   forms.forEach(form => {
-    form.addEventListener('submit', handleFormSubmit);
+    form.addEventListener('submit', (e) => handleFormSubmit(e, form));
   });
 
-  async function handleFormSubmit(e) {
+  async function handleFormSubmit(e, form) {
     e.preventDefault();
 
     // Clear previous errors
-    form.querySelectorAll('.form-input.error').forEach(input => {
+    form.querySelectorAll('.form-input.error, .form-select.error, .form-textarea.error, input.error, select.error, textarea.error').forEach(input => {
       input.classList.remove('error');
     });
 
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hasError) {
       // Focus first error field
-      const firstError = form.querySelector('.form-input.error');
+      const firstError = form.querySelector('.error');
       if (firstError) firstError.focus();
       return;
     }

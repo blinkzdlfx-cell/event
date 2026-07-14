@@ -6,6 +6,21 @@
     <title>Portfolio - Herkinx Events</title>
     <meta name="description" content="Explore our stunning portfolio of event decorations. See our work for weddings, birthdays, corporate events and more.">
     
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portfolio - Herkinx Events">
+    <meta property="og:description" content="Explore our stunning portfolio of event decorations. See our work for weddings, birthdays, corporate events and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herkinevents.com/portfolio.html">
+    <meta property="og:site_name" content="Herkinx Events">
+    <meta property="og:image" content="https://herkinevents.com/assets/images/hero/portfolio-hero.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://herkinevents.com/portfolio.html">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -43,14 +58,16 @@
     </script>
 </head>
 <body class="font-body bg-primary text-secondary">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-gold focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip to main content</a>
     <!-- Header -->
     <header id="header" class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="font-display text-2xl font-bold">
-                        HERKINX <span class="text-gold">EVENTS</span>
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-10 w-auto">
+                        <span class="font-display text-xl font-bold hidden sm:block">HERKINX <span class="text-gold">EVENTS</span></span>
                     </a>
                 </div>
                 
@@ -74,7 +91,7 @@
                 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu">
+                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu" aria-expanded="false">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -97,13 +114,13 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="relative h-96 flex items-center justify-center">
             <!-- Background Image -->
             <div class="absolute inset-0 bg-black/50 z-10"></div>
             <div class="absolute inset-0">
-                <img src="assets/images/portfolio-hero.jpg" alt="Our Portfolio" class="w-full h-full object-cover">
+                <img src="assets/images/hero/portfolio-hero.jpg" alt="Our Portfolio" class="w-full h-full object-cover">
             </div>
             
             <!-- Content -->
@@ -150,12 +167,12 @@
                     <!-- Portfolio Item 1 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="wedding">
                         <div class="relative h-80 overflow-hidden rounded-lg">
-                            <img src="assets/images/portfolio/wedding-001.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/wedding-001.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Elegant Wedding</h4>
                                     <p class="text-gray-200 mb-4">Grand Hotel, Lagos</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Elegant Wedding">
                                         View Details
                                     </button>
                                 </div>
@@ -166,12 +183,12 @@
                     <!-- Portfolio Item 2 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="corporate">
                         <div class="relative h-80 overflow-hidden rounded-lg">
-                            <img src="assets/images/portfolio/corporate-001.jpg" alt="Corporate Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/corporate-001.jpg" alt="Corporate Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Annual Gala</h4>
                                     <p class="text-gray-200 mb-4">Eko Convention Center</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Annual Gala">
                                         View Details
                                     </button>
                                 </div>
@@ -182,12 +199,12 @@
                     <!-- Portfolio Item 3 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="birthday">
                         <div class="relative h-80 overflow-hidden rounded-lg">
-                            <img src="assets/images/portfolio/birthday-001.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/birthday-001.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">50th Birthday</h4>
                                     <p class="text-gray-200 mb-4">Private Residence</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for 50th Birthday">
                                         View Details
                                     </button>
                                 </div>
@@ -198,12 +215,12 @@
                     <!-- Portfolio Item 4 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="wedding">
                         <div class="relative h-80 overflow-hidden rounded-lg">
-                            <img src="assets/images/portfolio/wedding-002.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/wedding-002.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Garden Wedding</h4>
                                     <p class="text-gray-200 mb-4">Lekki Gardens</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Garden Wedding">
                                         View Details
                                     </button>
                                 </div>
@@ -214,12 +231,12 @@
                     <!-- Portfolio Item 5 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="traditional">
                         <div class="relative h-80 overflow-hidden rounded-lg">
-                            <img src="assets/images/portfolio/traditional-001.jpg" alt="Traditional Marriage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/traditional-001.jpg" alt="Traditional Marriage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Igbo Traditional</h4>
                                     <p class="text-gray-200 mb-4">Cultural Center</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Igbo Traditional">
                                         View Details
                                     </button>
                                 </div>
@@ -230,12 +247,12 @@
                     <!-- Portfolio Item 6 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="corporate">
                         <div class="relative h-80 overflow-hidden rounded-lg">
-                            <img src="assets/images/portfolio/corporate-002.jpg" alt="Corporate Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/corporate-002.jpg" alt="Corporate Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Product Launch</h4>
                                     <p class="text-gray-200 mb-4">Federal Palace Hotel</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Product Launch">
                                         View Details
                                     </button>
                                 </div>
@@ -246,12 +263,12 @@
                     <!-- Portfolio Item 7 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="birthday">
                         <div class="relative h-80 overflow-hidden rounded-lg">
-                            <img src="assets/images/portfolio/birthday-002.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/birthday-002.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Kids Birthday</h4>
                                     <p class="text-gray-200 mb-4">Fun Park</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Kids Birthday">
                                         View Details
                                     </button>
                                 </div>
@@ -262,12 +279,12 @@
                     <!-- Portfolio Item 8 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="wedding">
                         <div class="relative h-80 overflow-hidden rounded-lg">
-                            <img src="assets/images/portfolio/wedding-003.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/wedding-003.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Beach Wedding</h4>
                                     <p class="text-gray-200 mb-4">Elegant Beach Resort</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Beach Wedding">
                                         View Details
                                     </button>
                                 </div>
@@ -278,12 +295,12 @@
                     <!-- Portfolio Item 9 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="other">
                         <div class="relative h-80 overflow-hidden rounded-lg">
-                            <img src="assets/images/portfolio/other-001.jpg" alt="Other Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <img src="assets/images/portfolio/other-001.jpg" alt="Other Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Graduation Party</h4>
                                     <p class="text-gray-200 mb-4">University Campus</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Graduation Party">
                                         View Details
                                     </button>
                                 </div>
@@ -326,9 +343,10 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <!-- Company Info -->
                 <div class="col-span-1 md:col-span-2">
-                    <h3 class="font-display text-2xl font-bold mb-4">
-                        HERKINX <span class="text-gold">EVENTS</span>
-                    </h3>
+                    <a href="index.html" class="inline-flex items-center gap-2 mb-4">
+                        <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-12 w-auto">
+                        <span class="font-display text-2xl font-bold">HERKINX <span class="text-gold">EVENTS</span></span>
+                    </a>
                     <p class="text-gray-300 mb-6 max-w-md">
                         Transforming ordinary venues into extraordinary experiences. 
                         Luxury in every detail.
@@ -390,9 +408,35 @@
         </div>
     </footer>
 
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <button id="chat-button" class="chat-button" aria-label="Open chat">
+            <i class="fas fa-comments text-2xl"></i>
+        </button>
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <div>
+                    <h4 class="font-display font-semibold">Live Chat</h4>
+                    <p class="text-sm opacity-75">We typically reply within minutes</p>
+                </div>
+                <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="chat-message bot">
+                    <div class="message-bubble">Hello! How can we help you today?</div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." aria-label="Chat message">
+                <button id="chat-send" class="chat-send" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/portfolio.js"></script>
+    <script src="js/chat.js"></script>
 </body>
 </html>

@@ -6,6 +6,21 @@
     <title>FAQ - Herkinx Events</title>
     <meta name="description" content="Frequently asked questions about Herkinx Events and our event decoration services.">
     
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ - Herkinx Events">
+    <meta property="og:description" content="Frequently asked questions about Herkinx Events and our event decoration services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herkinevents.com/faq.html">
+    <meta property="og:site_name" content="Herkinx Events">
+    <meta property="og:image" content="https://herkinevents.com/assets/images/hero/faq-hero.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://herkinevents.com/faq.html">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -41,16 +56,36 @@
             }
         }
     </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What services does Herkinx Events offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Herkinx Events offers a comprehensive range of luxury event decoration services including wedding decoration, traditional marriage decoration, birthday decoration, and more."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="font-body bg-primary text-secondary">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-gold focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip to main content</a>
     <!-- Header -->
     <header id="header" class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="font-display text-2xl font-bold">
-                        HERKINX <span class="text-gold">EVENTS</span>
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-10 w-auto">
+                        <span class="font-display text-xl font-bold hidden sm:block">HERKINX <span class="text-gold">EVENTS</span></span>
                     </a>
                 </div>
                 
@@ -74,7 +109,7 @@
                 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu">
+                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu" aria-expanded="false">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -97,13 +132,13 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="relative h-96 flex items-center justify-center">
             <!-- Background Image -->
             <div class="absolute inset-0 bg-black/50 z-10"></div>
             <div class="absolute inset-0">
-                <img src="assets/images/faq-hero.jpg" alt="FAQ" class="w-full h-full object-cover">
+                <img src="assets/images/hero/faq-hero.jpg" alt="FAQ" class="w-full h-full object-cover">
             </div>
             
             <!-- Content -->
@@ -153,11 +188,11 @@
                 <div class="space-y-4" id="faq-accordion">
                     <!-- FAQ 1 -->
                     <div class="faq-item border border-gray-200 rounded-lg overflow-hidden animate-on-scroll" data-category="general">
-                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors" aria-expanded="false" aria-controls="faq-answer-1">
                             <span class="font-display text-lg font-semibold">What services does Herkinx Events offer?</span>
-                            <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            <i class="fas fa-chevron-down text-gold transition-transform duration-300" aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-4 hidden">
+                        <div class="faq-answer px-6 pb-4 hidden" id="faq-answer-1">
                             <p class="text-gray-600">
                                 Herkinx Events offers a comprehensive range of luxury event decoration services including wedding decoration, traditional marriage decoration, birthday decoration, proposal decoration, engagement decoration, bridal shower, baby shower, anniversary decoration, graduation parties, corporate events, church decoration, outdoor events, indoor events, reception decoration, stage decoration, table styling, floral decoration, balloon decoration, entrance decoration, luxury event styling, event planning, and event coordination.
                             </p>
@@ -166,11 +201,11 @@
                     
                     <!-- FAQ 2 -->
                     <div class="faq-item border border-gray-200 rounded-lg overflow-hidden animate-on-scroll" data-category="general">
-                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors" aria-expanded="false" aria-controls="faq-answer-2">
                             <span class="font-display text-lg font-semibold">How far in advance should I book your services?</span>
-                            <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            <i class="fas fa-chevron-down text-gold transition-transform duration-300" aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-4 hidden">
+                        <div class="faq-answer px-6 pb-4 hidden" id="faq-answer-2">
                             <p class="text-gray-600">
                                 We recommend booking our services at least 3-6 months in advance for weddings and large events, and 1-2 months for smaller events like birthday parties. However, we do our best to accommodate last-minute bookings based on availability. The earlier you book, the more time we have to plan and create the perfect decoration for your event.
                             </p>
@@ -179,11 +214,11 @@
                     
                     <!-- FAQ 3 -->
                     <div class="faq-item border border-gray-200 rounded-lg overflow-hidden animate-on-scroll" data-category="booking">
-                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors" aria-expanded="false" aria-controls="faq-answer-3">
                             <span class="font-display text-lg font-semibold">How do I book your services?</span>
-                            <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            <i class="fas fa-chevron-down text-gold transition-transform duration-300" aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-4 hidden">
+                        <div class="faq-answer px-6 pb-4 hidden" id="faq-answer-3">
                             <p class="text-gray-600">
                                 Booking is easy! Simply fill out our online booking form on the Contact/Booking page with your event details. We'll review your request and contact you within 24 hours to discuss your needs and schedule a consultation. You can also reach us directly via phone or email. A deposit is required to confirm your booking.
                             </p>
@@ -192,11 +227,11 @@
                     
                     <!-- FAQ 4 -->
                     <div class="faq-item border border-gray-200 rounded-lg overflow-hidden animate-on-scroll" data-category="booking">
-                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors" aria-expanded="false" aria-controls="faq-answer-4">
                             <span class="font-display text-lg font-semibold">What is your cancellation policy?</span>
-                            <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            <i class="fas fa-chevron-down text-gold transition-transform duration-300" aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-4 hidden">
+                        <div class="faq-answer px-6 pb-4 hidden" id="faq-answer-4">
                             <p class="text-gray-600">
                                 We understand that plans can change. Our cancellation policy is as follows: Cancellations made 30+ days before the event receive a full refund minus the deposit. Cancellations made 15-29 days before receive a 50% refund. Cancellations made less than 15 days before the event are non-refundable. We recommend purchasing event insurance for unforeseen circumstances.
                             </p>
@@ -205,11 +240,11 @@
                     
                     <!-- FAQ 5 -->
                     <div class="faq-item border border-gray-200 rounded-lg overflow-hidden animate-on-scroll" data-category="services">
-                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors" aria-expanded="false" aria-controls="faq-answer-5">
                             <span class="font-display text-lg font-semibold">Do you provide decorations for outdoor events?</span>
-                            <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            <i class="fas fa-chevron-down text-gold transition-transform duration-300" aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-4 hidden">
+                        <div class="faq-answer px-6 pb-4 hidden" id="faq-answer-5">
                             <p class="text-gray-600">
                                 Yes, we specialize in both indoor and outdoor event decorations. We use weather-resistant materials and have contingency plans for outdoor events. Our team will assess the venue and recommend the best decoration approach based on the location, weather conditions, and your preferences.
                             </p>
@@ -218,11 +253,11 @@
                     
                     <!-- FAQ 6 -->
                     <div class="faq-item border border-gray-200 rounded-lg overflow-hidden animate-on-scroll" data-category="services">
-                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors" aria-expanded="false" aria-controls="faq-answer-6">
                             <span class="font-display text-lg font-semibold">Can I customize the decoration theme?</span>
-                            <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            <i class="fas fa-chevron-down text-gold transition-transform duration-300" aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-4 hidden">
+                        <div class="faq-answer px-6 pb-4 hidden" id="faq-answer-6">
                             <p class="text-gray-600">
                                 Absolutely! We specialize in creating custom designs tailored to your specific preferences, theme, and style. During our consultation, we'll discuss your vision, color preferences, and any specific elements you want to include. Our design team will create a custom proposal that reflects your unique style.
                             </p>
@@ -231,11 +266,11 @@
                     
                     <!-- FAQ 7 -->
                     <div class="faq-item border border-gray-200 rounded-lg overflow-hidden animate-on-scroll" data-category="pricing">
-                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors" aria-expanded="false" aria-controls="faq-answer-7">
                             <span class="font-display text-lg font-semibold">How much does your decoration service cost?</span>
-                            <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            <i class="fas fa-chevron-down text-gold transition-transform duration-300" aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-4 hidden">
+                        <div class="faq-answer px-6 pb-4 hidden" id="faq-answer-7">
                             <p class="text-gray-600">
                                 Our pricing varies based on the type of event, venue size, decoration complexity, and specific requirements. We offer packages starting from ₦500,000 for smaller events to ₦10,000,000+ for luxury weddings. We provide detailed quotes after our initial consultation. Every package is customizable to fit your budget and needs.
                             </p>
@@ -244,11 +279,11 @@
                     
                     <!-- FAQ 8 -->
                     <div class="faq-item border border-gray-200 rounded-lg overflow-hidden animate-on-scroll" data-category="pricing">
-                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors" aria-expanded="false" aria-controls="faq-answer-8">
                             <span class="font-display text-lg font-semibold">Do you offer payment plans?</span>
-                            <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            <i class="fas fa-chevron-down text-gold transition-transform duration-300" aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-4 hidden">
+                        <div class="faq-answer px-6 pb-4 hidden" id="faq-answer-8">
                             <p class="text-gray-600">
                                 Yes, we offer flexible payment plans to make our services accessible. Typically, we require a 50% deposit to secure your booking, with the remaining balance due 7 days before the event. For larger events, we can arrange installment payments. We accept bank transfers, cash, and mobile payments.
                             </p>
@@ -257,11 +292,11 @@
                     
                     <!-- FAQ 9 -->
                     <div class="faq-item border border-gray-200 rounded-lg overflow-hidden animate-on-scroll" data-category="general">
-                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors" aria-expanded="false" aria-controls="faq-answer-9">
                             <span class="font-display text-lg font-semibold">What areas do you service?</span>
-                            <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            <i class="fas fa-chevron-down text-gold transition-transform duration-300" aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-4 hidden">
+                        <div class="faq-answer px-6 pb-4 hidden" id="faq-answer-9">
                             <p class="text-gray-600">
                                 We primarily service Lagos State and surrounding areas in Nigeria. However, we are available for destination events across Nigeria and internationally for special requests. Additional travel fees may apply for events outside our primary service area. Contact us to discuss your specific location.
                             </p>
@@ -270,11 +305,11 @@
                     
                     <!-- FAQ 10 -->
                     <div class="faq-item border border-gray-200 rounded-lg overflow-hidden animate-on-scroll" data-category="services">
-                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors" aria-expanded="false" aria-controls="faq-answer-10">
                             <span class="font-display text-lg font-semibold">Do you provide floral arrangements?</span>
-                            <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                            <i class="fas fa-chevron-down text-gold transition-transform duration-300" aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-4 hidden">
+                        <div class="faq-answer px-6 pb-4 hidden" id="faq-answer-10">
                             <p class="text-gray-600">
                                 Yes, we offer both fresh and artificial floral arrangements as part of our decoration services. We work with premium florists to create stunning floral designs that complement your event theme. We can also incorporate your preferred flowers and colors into the design.
                             </p>
@@ -318,9 +353,10 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <!-- Company Info -->
                 <div class="col-span-1 md:col-span-2">
-                    <h3 class="font-display text-2xl font-bold mb-4">
-                        HERKINX <span class="text-gold">EVENTS</span>
-                    </h3>
+                    <a href="index.html" class="inline-flex items-center gap-2 mb-4">
+                        <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-12 w-auto">
+                        <span class="font-display text-2xl font-bold">HERKINX <span class="text-gold">EVENTS</span></span>
+                    </a>
                     <p class="text-gray-300 mb-6 max-w-md">
                         Transforming ordinary venues into extraordinary experiences. 
                         Luxury in every detail.
@@ -382,9 +418,35 @@
         </div>
     </footer>
 
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <button id="chat-button" class="chat-button" aria-label="Open chat">
+            <i class="fas fa-comments text-2xl"></i>
+        </button>
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <div>
+                    <h4 class="font-display font-semibold">Live Chat</h4>
+                    <p class="text-sm opacity-75">We typically reply within minutes</p>
+                </div>
+                <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="chat-message bot">
+                    <div class="message-bubble">Hello! How can we help you today?</div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." aria-label="Chat message">
+                <button id="chat-send" class="chat-send" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/faq.js"></script>
+    <script src="js/chat.js"></script>
 </body>
 </html>

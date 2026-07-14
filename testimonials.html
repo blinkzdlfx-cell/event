@@ -6,6 +6,21 @@
     <title>Testimonials - Herkinx Events</title>
     <meta name="description" content="Read what our clients say about Herkinx Events. Customer testimonials and reviews.">
     
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Testimonials - Herkinx Events">
+    <meta property="og:description" content="Read what our clients say about Herkinx Events. Customer testimonials and reviews.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herkinevents.com/testimonials.html">
+    <meta property="og:site_name" content="Herkinx Events">
+    <meta property="og:image" content="https://herkinevents.com/assets/images/hero/testimonials-hero.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://herkinevents.com/testimonials.html">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -43,14 +58,16 @@
     </script>
 </head>
 <body class="font-body bg-primary text-secondary">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-gold focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip to main content</a>
     <!-- Header -->
     <header id="header" class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="font-display text-2xl font-bold">
-                        HERKINX <span class="text-gold">EVENTS</span>
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-10 w-auto">
+                        <span class="font-display text-xl font-bold hidden sm:block">HERKINX <span class="text-gold">EVENTS</span></span>
                     </a>
                 </div>
                 
@@ -74,7 +91,7 @@
                 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu">
+                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu" aria-expanded="false">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -97,13 +114,13 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="relative h-96 flex items-center justify-center">
             <!-- Background Image -->
             <div class="absolute inset-0 bg-black/50 z-10"></div>
             <div class="absolute inset-0">
-                <img src="assets/images/testimonials-hero.jpg" alt="Client Testimonials" class="w-full h-full object-cover">
+                <img src="assets/images/hero/testimonials-hero.jpg" alt="Client Testimonials" class="w-full h-full object-cover">
             </div>
             
             <!-- Content -->
@@ -123,7 +140,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Image -->
                     <div class="relative animate-on-scroll">
-                        <img src="assets/images/testimonials/featured.jpg" alt="Featured Testimonial" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                        <img src="assets/images/testimonials/featured.jpg" alt="Wedding decoration showcase by Herkinx Events" class="w-full h-96 object-cover rounded-lg shadow-lg" loading="lazy">
                         <div class="absolute -bottom-6 -right-6 bg-gold text-white p-6 rounded-lg shadow-lg">
                             <div class="text-3xl font-bold font-display">5.0</div>
                             <div class="text-sm">Client Rating</div>
@@ -133,19 +150,19 @@
                     <!-- Content -->
                     <div class="animate-on-scroll">
                         <div class="flex items-center mb-4">
-                            <div class="text-gold text-xl">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            <div class="text-gold text-xl" aria-label="5 out of 5 stars" role="img">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                         <blockquote class="text-2xl text-gray-600 mb-8 italic leading-relaxed">
                             "Herkinx Events didn't just decorate our wedding - they created a magical experience that left our guests speechless. Every detail was perfect, from the floral arrangements to the lighting. They truly understand luxury and elegance."
                         </blockquote>
                         <div class="flex items-center">
-                            <img src="assets/images/testimonials/client-featured.jpg" alt="Chioma & Emeka" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <img src="assets/images/testimonials/client-featured.jpg" alt="Chioma and Emeka Okonkwo - Herkinx Events clients" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy">
                             <div>
                                 <h3 class="font-display text-xl font-bold">Chioma & Emeka Okonkwo</h3>
                                 <p class="text-gold">Wedding, December 2023</p>
@@ -171,19 +188,19 @@
                     <!-- Testimonial 1 -->
                     <div class="bg-white p-8 rounded-lg shadow-lg animate-on-scroll">
                         <div class="flex items-center mb-4">
-                            <div class="text-gold">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            <div class="text-gold" aria-label="5 out of 5 stars" role="img">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-6 italic">
                             "Herkinx Events made our wedding absolutely perfect! The attention to detail was incredible, and every guest was amazed by the beautiful decorations. We couldn't have asked for a better team."
                         </p>
                         <div class="flex items-center">
-                            <img src="assets/images/testimonials/client-1.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <img src="assets/images/testimonials/client-1.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy">
                             <div>
                                 <h4 class="font-semibold">Sarah Johnson</h4>
                                 <p class="text-gray-500 text-sm">Wedding, December 2023</p>
@@ -194,19 +211,19 @@
                     <!-- Testimonial 2 -->
                     <div class="bg-white p-8 rounded-lg shadow-lg animate-on-scroll">
                         <div class="flex items-center mb-4">
-                            <div class="text-gold">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            <div class="text-gold" aria-label="5 out of 5 stars" role="img">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-6 italic">
                             "Professional, creative, and absolutely stunning! Our corporate event was transformed into an elegant affair that impressed all our clients and partners. Highly recommended!"
                         </p>
                         <div class="flex items-center">
-                            <img src="assets/images/testimonials/client-2.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <img src="assets/images/testimonials/client-2.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy">
                             <div>
                                 <h4 class="font-semibold">Michael Chen</h4>
                                 <p class="text-gray-500 text-sm">Corporate Gala, November 2023</p>
@@ -217,19 +234,19 @@
                     <!-- Testimonial 3 -->
                     <div class="bg-white p-8 rounded-lg shadow-lg animate-on-scroll">
                         <div class="flex items-center mb-4">
-                            <div class="text-gold">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            <div class="text-gold" aria-label="5 out of 5 stars" role="img">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-6 italic">
                             "From the initial consultation to the final setup, Herkinx Events exceeded our expectations. My daughter's birthday party was a dream come true! The kids loved every moment."
                         </p>
                         <div class="flex items-center">
-                            <img src="assets/images/testimonials/client-3.jpg" alt="Amara Okafor" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <img src="assets/images/testimonials/client-3.jpg" alt="Amara Okafor" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy">
                             <div>
                                 <h4 class="font-semibold">Amara Okafor</h4>
                                 <p class="text-gray-500 text-sm">Birthday Party, October 2023</p>
@@ -240,19 +257,19 @@
                     <!-- Testimonial 4 -->
                     <div class="bg-white p-8 rounded-lg shadow-lg animate-on-scroll">
                         <div class="flex items-center mb-4">
-                            <div class="text-gold">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            <div class="text-gold" aria-label="5 out of 5 stars" role="img">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-6 italic">
                             "The traditional marriage ceremony was beautifully decorated. Herkinx Events understood our cultural requirements perfectly and created a stunning setup that honored our traditions."
                         </p>
                         <div class="flex items-center">
-                            <img src="assets/images/testimonials/client-4.jpg" alt="Adaeze Nwosu" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <img src="assets/images/testimonials/client-4.jpg" alt="Adaeze Nwosu" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy">
                             <div>
                                 <h4 class="font-semibold">Adaeze Nwosu</h4>
                                 <p class="text-gray-500 text-sm">Traditional Marriage, September 2023</p>
@@ -263,19 +280,19 @@
                     <!-- Testimonial 5 -->
                     <div class="bg-white p-8 rounded-lg shadow-lg animate-on-scroll">
                         <div class="flex items-center mb-4">
-                            <div class="text-gold">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            <div class="text-gold" aria-label="5 out of 5 stars" role="img">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-6 italic">
                             "We've used Herkinx Events for three corporate events now, and they never disappoint. Their professionalism and creativity are unmatched in the industry."
                         </p>
                         <div class="flex items-center">
-                            <img src="assets/images/testimonials/client-5.jpg" alt="David Adeyemi" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <img src="assets/images/testimonials/client-5.jpg" alt="David Adeyemi" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy">
                             <div>
                                 <h4 class="font-semibold">David Adeyemi</h4>
                                 <p class="text-gray-500 text-sm">Corporate Event, August 2023</p>
@@ -286,19 +303,19 @@
                     <!-- Testimonial 6 -->
                     <div class="bg-white p-8 rounded-lg shadow-lg animate-on-scroll">
                         <div class="flex items-center mb-4">
-                            <div class="text-gold">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            <div class="text-gold" aria-label="5 out of 5 stars" role="img">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-6 italic">
                             "My engagement party was absolutely beautiful thanks to Herkinx Events. They created a romantic atmosphere that perfectly captured our love story. Thank you!"
                         </p>
                         <div class="flex items-center">
-                            <img src="assets/images/testimonials/client-6.jpg" alt="Blessing Eze" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <img src="assets/images/testimonials/client-6.jpg" alt="Blessing Eze" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy">
                             <div>
                                 <h4 class="font-semibold">Blessing Eze</h4>
                                 <p class="text-gray-500 text-sm">Engagement Party, July 2023</p>
@@ -345,7 +362,7 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="relative group cursor-pointer animate-on-scroll">
-                        <img src="assets/images/testimonials/video-1.jpg" alt="Video Testimonial" class="w-full h-64 object-cover rounded-lg">
+                        <img src="assets/images/testimonials/video-1.jpg" alt="Video testimonial from Chioma and Emeka about their wedding decoration" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors rounded-lg flex items-center justify-center">
                             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                                 <i class="fas fa-play text-white text-xl ml-1"></i>
@@ -358,7 +375,7 @@
                     </div>
                     
                     <div class="relative group cursor-pointer animate-on-scroll">
-                        <img src="assets/images/testimonials/video-2.jpg" alt="Video Testimonial" class="w-full h-64 object-cover rounded-lg">
+                        <img src="assets/images/testimonials/video-2.jpg" alt="Video testimonial from Tech Corp about their annual gala decoration" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors rounded-lg flex items-center justify-center">
                             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                                 <i class="fas fa-play text-white text-xl ml-1"></i>
@@ -371,7 +388,7 @@
                     </div>
                     
                     <div class="relative group cursor-pointer animate-on-scroll">
-                        <img src="assets/images/testimonials/video-3.jpg" alt="Video Testimonial" class="w-full h-64 object-cover rounded-lg">
+                        <img src="assets/images/testimonials/video-3.jpg" alt="Video testimonial from Amara about her 50th birthday decoration" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors rounded-lg flex items-center justify-center">
                             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                                 <i class="fas fa-play text-white text-xl ml-1"></i>
@@ -411,9 +428,10 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <!-- Company Info -->
                 <div class="col-span-1 md:col-span-2">
-                    <h3 class="font-display text-2xl font-bold mb-4">
-                        HERKINX <span class="text-gold">EVENTS</span>
-                    </h3>
+                    <a href="index.html" class="inline-flex items-center gap-2 mb-4">
+                        <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-12 w-auto">
+                        <span class="font-display text-2xl font-bold">HERKINX <span class="text-gold">EVENTS</span></span>
+                    </a>
                     <p class="text-gray-300 mb-6 max-w-md">
                         Transforming ordinary venues into extraordinary experiences. 
                         Luxury in every detail.
@@ -475,8 +493,34 @@
         </div>
     </footer>
 
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <button id="chat-button" class="chat-button" aria-label="Open chat">
+            <i class="fas fa-comments text-2xl"></i>
+        </button>
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <div>
+                    <h4 class="font-display font-semibold">Live Chat</h4>
+                    <p class="text-sm opacity-75">We typically reply within minutes</p>
+                </div>
+                <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="chat-message bot">
+                    <div class="message-bubble">Hello! How can we help you today?</div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." aria-label="Chat message">
+                <button id="chat-send" class="chat-send" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/chat.js"></script>
 </body>
 </html>

@@ -6,6 +6,21 @@
     <title>Services - Herkinx Events</title>
     <meta name="description" content="Explore our premium event decoration services for weddings, birthdays, corporate events and more.">
     
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Services - Herkinx Events">
+    <meta property="og:description" content="Explore our premium event decoration services for weddings, birthdays, corporate events and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herkinevents.com/services.html">
+    <meta property="og:site_name" content="Herkinx Events">
+    <meta property="og:image" content="https://herkinevents.com/assets/images/hero/services-hero.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://herkinevents.com/services.html">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -43,14 +58,16 @@
     </script>
 </head>
 <body class="font-body bg-primary text-secondary">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-gold focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip to main content</a>
     <!-- Header -->
     <header id="header" class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="font-display text-2xl font-bold">
-                        HERKINX <span class="text-gold">EVENTS</span>
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-10 w-auto">
+                        <span class="font-display text-xl font-bold hidden sm:block">HERKINX <span class="text-gold">EVENTS</span></span>
                     </a>
                 </div>
                 
@@ -74,7 +91,7 @@
                 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu">
+                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu" aria-expanded="false">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -97,13 +114,13 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="relative h-96 flex items-center justify-center">
             <!-- Background Image -->
             <div class="absolute inset-0 bg-black/50 z-10"></div>
             <div class="absolute inset-0">
-                <img src="assets/images/services-hero.jpg" alt="Our Services" class="w-full h-full object-cover">
+                <img src="assets/images/hero/services-hero.jpg" alt="Our Services" class="w-full h-full object-cover">
             </div>
             
             <!-- Content -->
@@ -131,7 +148,7 @@
                     <!-- Service 1: Wedding Decoration -->
                     <div id="wedding" class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/wedding.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/wedding.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -156,7 +173,7 @@
                     <!-- Service 2: Traditional Marriage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/traditional.jpg" alt="Traditional Marriage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/traditional.jpg" alt="Traditional Marriage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -177,7 +194,7 @@
                     <!-- Service 3: Birthday Decoration -->
                     <div id="birthday" class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/birthday.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/birthday.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -198,7 +215,7 @@
                     <!-- Service 4: Corporate Events -->
                     <div id="corporate" class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/corporate.jpg" alt="Corporate Events" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/corporate.jpg" alt="Corporate Events" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -219,7 +236,7 @@
                     <!-- Service 5: Proposal Decoration -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/proposal.jpg" alt="Proposal Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/proposal.jpg" alt="Proposal Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -240,7 +257,7 @@
                     <!-- Service 6: Engagement Decoration -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/engagement.jpg" alt="Engagement Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/engagement.jpg" alt="Engagement Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -261,7 +278,7 @@
                     <!-- Service 7: Bridal Shower -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/bridal-shower.jpg" alt="Bridal Shower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/bridal-shower.jpg" alt="Bridal Shower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -282,7 +299,7 @@
                     <!-- Service 8: Baby Shower -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/baby-shower.jpg" alt="Baby Shower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/baby-shower.jpg" alt="Baby Shower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -303,7 +320,7 @@
                     <!-- Service 9: Anniversary Decoration -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="assets/images/services/anniversary.jpg" alt="Anniversary Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/services/anniversary.jpg" alt="Anniversary Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
                         <div class="p-6">
@@ -441,9 +458,10 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <!-- Company Info -->
                 <div class="col-span-1 md:col-span-2">
-                    <h3 class="font-display text-2xl font-bold mb-4">
-                        HERKINX <span class="text-gold">EVENTS</span>
-                    </h3>
+                    <a href="index.html" class="inline-flex items-center gap-2 mb-4">
+                        <img src="assets/images/logo/logo.png" alt="Herkinx Events Logo" class="h-12 w-auto">
+                        <span class="font-display text-2xl font-bold">HERKINX <span class="text-gold">EVENTS</span></span>
+                    </a>
                     <p class="text-gray-300 mb-6 max-w-md">
                         Transforming ordinary venues into extraordinary experiences. 
                         Luxury in every detail.
@@ -505,8 +523,34 @@
         </div>
     </footer>
 
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <button id="chat-button" class="chat-button" aria-label="Open chat">
+            <i class="fas fa-comments text-2xl"></i>
+        </button>
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <div>
+                    <h4 class="font-display font-semibold">Live Chat</h4>
+                    <p class="text-sm opacity-75">We typically reply within minutes</p>
+                </div>
+                <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="chat-message bot">
+                    <div class="message-bubble">Hello! How can we help you today?</div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." aria-label="Chat message">
+                <button id="chat-send" class="chat-send" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/chat.js"></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 // GSAP Animations for Herkinx Events
 
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
 gsap.registerPlugin(ScrollTrigger);
 
 // Hero content animation
@@ -30,7 +32,7 @@ function initScrollAnimations() {
         toggleActions: 'play none none none',
         once: true
       },
-      delay: index * 0.05
+      delay: (index % 10) * 0.05
     });
   });
 }
@@ -85,25 +87,9 @@ function initCounters() {
   });
 }
 
-// Parallax effect for hero backgrounds
-function initParallax() {
-  gsap.utils.toArray('.hero-bg').forEach(bg => {
-    gsap.to(bg, {
-      yPercent: 30,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: bg.closest('.hero-section'),
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true
-      }
-    });
-  });
-}
-
 // Card hover animations
 function initCardAnimations() {
-  gsap.utils.toArray('.service-card, .portfolio-item').forEach(card => {
+  gsap.utils.toArray('.portfolio-item').forEach(card => {
     card.addEventListener('mouseenter', () => {
       gsap.to(card, {
         y: -12,
@@ -161,8 +147,11 @@ function initPageTransition() {
   document.querySelectorAll('a[href$=".html"]').forEach(link => {
     if (link.hostname === window.location.hostname) {
       link.addEventListener('click', (e) => {
-        e.preventDefault();
         const href = link.getAttribute('href');
+        // Preserve hash fragments
+        const hash = link.hash;
+        
+        e.preventDefault();
         
         gsap.to(transitionOverlay, {
           scaleY: 1,
@@ -178,40 +167,22 @@ function initPageTransition() {
   });
 }
 
-// Staggered list animations
-function initStaggerLists() {
-  gsap.utils.toArray('.stagger-list').forEach(list => {
-    const items = list.querySelectorAll('li');
-    gsap.from(items, {
-      y: 30,
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.1,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: list,
-        start: 'top 85%',
-        toggleActions: 'play none none none',
-        once: true
-      }
-    });
-  });
-}
-
 // Initialize all animations
 function initAnimations() {
   initHeroAnimation();
   initScrollAnimations();
   initTextReveal();
   initCounters();
-  initParallax();
   initCardAnimations();
   initPageTransition();
-  initStaggerLists();
 
-  // Refresh ScrollTrigger on resize
+  // Refresh ScrollTrigger on resize (debounced)
+  let resizeTimeout;
   window.addEventListener('resize', () => {
-    ScrollTrigger.refresh();
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 250);
   });
 }
 
@@ -221,3 +192,5 @@ if (document.readyState === 'loading') {
 } else {
   initAnimations();
 }
+
+} // end GSAP check
