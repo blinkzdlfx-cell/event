@@ -21,6 +21,19 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://herkinevents.com/booking.html">
 
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Book Your Event - Herkinx Events">
+  <meta name="twitter:description" content="Book your luxury event with Herkinx Events. Fill out our booking form to get started on creating an unforgettable experience.">
+  <meta name="twitter:image" content="https://herkinevents.com/assets/images/hero/booking-hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo/logo.png">
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -72,6 +85,33 @@
     },
     "priceRange": "$$$$",
     "openingHours": "Mo-Su 09:00-21:00"
+  }
+  </script>
+
+  <!-- BreadcrumbList Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://herkinevents.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Book Your Event", "item": "https://herkinevents.com/booking.html" }
+    ]
+  }
+  </script>
+
+  <!-- Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Herkinx Events",
+    "url": "https://herkinevents.com",
+    "logo": "https://herkinevents.com/assets/images/logo/logo.png",
+    "description": "Book your luxury event with Herkinx Events. Fill out our booking form to get started.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG" },
+    "telephone": "+234903505732",
+    "email": "info@herkinevents.com"
   }
   </script>
 </head>

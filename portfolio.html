@@ -21,6 +21,19 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://herkinevents.com/portfolio.html">
     
+    <!-- SEO -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio - Herkinx Events">
+    <meta name="twitter:description" content="Explore our stunning portfolio of luxury event decorations. Weddings, corporate events, birthdays, and more in Lagos.">
+    <meta name="twitter:image" content="https://herkinevents.com/assets/images/hero/portfolio-hero.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo/logo.png">
+    <link rel="apple-touch-icon" href="assets/images/logo/logo.png">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -55,6 +68,33 @@
                 }
             }
         }
+    </script>
+
+    <!-- BreadcrumbList Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://herkinevents.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://herkinevents.com/portfolio.html" }
+      ]
+    }
+    </script>
+
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Herkinx Events",
+      "url": "https://herkinevents.com",
+      "logo": "https://herkinevents.com/assets/images/logo/logo.png",
+      "description": "Explore our stunning portfolio of luxury event decorations in Lagos, Nigeria.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG" },
+      "telephone": "+234903505732",
+      "email": "info@herkinevents.com"
+    }
     </script>
 </head>
 <body class="font-body bg-primary text-secondary">
