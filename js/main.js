@@ -4,27 +4,48 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu toggle
   const menuToggle = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
+  const mobileOverlay = document.getElementById('mobile-overlay');
+  const mobileClose = document.getElementById('mobile-close');
+  const menuIcon = menuToggle?.querySelector('i');
+
+  function openMobileMenu() {
+    mobileMenu.classList.add('open');
+    if (mobileOverlay) mobileOverlay.classList.add('open');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    if (menuIcon) { menuIcon.className = 'fas fa-times text-2xl'; }
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open');
+    if (mobileOverlay) mobileOverlay.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    if (menuIcon) { menuIcon.className = 'fas fa-bars text-2xl'; }
+    document.body.style.overflow = '';
+  }
 
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
+      if (mobileMenu.classList.contains('open')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
+
+    // Close on overlay click
+    if (mobileOverlay) {
+      mobileOverlay.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close on close button
+    if (mobileClose) {
+      mobileClose.addEventListener('click', closeMobileMenu);
+    }
 
     // Close mobile menu when clicking a link
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Close mobile menu on outside click
-    document.addEventListener('click', (e) => {
-      if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      }
+      link.addEventListener('click', closeMobileMenu);
     });
   }
 
