@@ -318,9 +318,15 @@ body {
 
 .card-image {
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
   transition: transform 0.6s ease;
+}
+
+@media (min-width: 768px) {
+  .card-image {
+    height: 300px;
+  }
 }
 
 .card:hover .card-image {
@@ -767,7 +773,7 @@ body {
 }
 
 .faq-category {
-  padding: 0.625rem 1.25rem;
+  padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
   font-weight: 500;
   color: #666;
@@ -939,6 +945,11 @@ body {
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.3s ease;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .chat-close:hover {
@@ -1254,9 +1265,30 @@ body {
   transition: all 0.3s ease;
 }
 
+.social-link {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
 .social-link:hover {
   background: #d4af37;
   transform: translateY(-2px);
+}
+
+/* Footer social icon touch targets */
+footer .flex.space-x-4 a {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
 .gold {
@@ -1431,6 +1463,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
   .btn {
     padding: 0.875rem 1.5rem;
   }
@@ -1447,6 +1483,20 @@ body {
 /* ============================================
    Reduced Motion
    ============================================ */
+
+/* Touch devices: always show portfolio overlay content */
+@media (hover: none) and (pointer: coarse) {
+  .portfolio-item > div > .absolute.inset-0 {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .portfolio-item > div > .absolute.inset-0 > div {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  .portfolio-item > div > .absolute.inset-0 button {
+    display: inline-block;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *,

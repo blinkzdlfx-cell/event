@@ -1,0 +1,5 @@
+Access to manifest at 'file:///C:/Users/TOSHIBA/Desktop/app/event/assets/site.webmanifest' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-extension, chrome-untrusted, data, http, https, isolated-app.
+assets/site.webmanifest:1  Failed to load resource: net::ERR_FAILED
+index.html:1 Unsafe attempt to load URL file:///C:/Users/TOSHIBA/Desktop/app/event/index.html from frame with URL file:///C:/Users/TOSHIBA/Desktop/app/event/index.html. 'file:' URLs are treated as unique security origins.
+
+index.html:1 Access to internal resource at 'file:///C:/Users/TOSHIBA/Desktop/app/event/assets/site.webmanifest' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-extension, chrome-untrusted, data, http, https, isolated-app.

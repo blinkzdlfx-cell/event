@@ -164,13 +164,13 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 z-50 w-80 bg-white border-l shadow-2xl">
             <div class="px-4 py-6 space-y-3 pt-16">
-                <a href="index.html" class="block py-2 text-secondary hover:text-gold">Home</a>
-                <a href="about.html" class="block py-2 text-secondary hover:text-gold">About</a>
-                <a href="services.html" class="block py-2 text-secondary hover:text-gold">Services</a>
-                <a href="portfolio.html" class="block py-2 text-secondary hover:text-gold">Portfolio</a>
-                <a href="testimonials.html" class="block py-2 text-secondary hover:text-gold">Testimonials</a>
-                <a href="faq.html" class="block py-2 text-secondary hover:text-gold">FAQ</a>
-                <a href="contact.html" class="block py-2 text-secondary hover:text-gold">Contact</a>
+                <a href="index.html" class="block py-3 text-secondary hover:text-gold">Home</a>
+                <a href="about.html" class="block py-3 text-secondary hover:text-gold">About</a>
+                <a href="services.html" class="block py-3 text-secondary hover:text-gold">Services</a>
+                <a href="portfolio.html" class="block py-3 text-secondary hover:text-gold">Portfolio</a>
+                <a href="testimonials.html" class="block py-3 text-secondary hover:text-gold">Testimonials</a>
+                <a href="faq.html" class="block py-3 text-secondary hover:text-gold">FAQ</a>
+                <a href="contact.html" class="block py-3 text-secondary hover:text-gold">Contact</a>
                 <a href="booking.html" class="block py-3 bg-secondary text-white text-center font-medium hover:bg-gold">Book Now</a>
             </div>
         </div>
@@ -179,7 +179,7 @@
     <!-- Main Content -->
     <main id="main-content">
         <!-- Hero Section -->
-        <section class="relative h-screen flex items-center justify-center">
+        <section class="relative min-h-[100dvh] md:h-screen flex items-center justify-center">
             <!-- Background Image/Video -->
             <div class="absolute inset-0 bg-black/40 z-10"></div>
             <div class="absolute inset-0">
@@ -219,7 +219,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Image -->
                     <div class="relative animate-on-scroll">
-                        <img src="assets/images/about-preview.jpg" alt="Herkinx Events Team" class="w-full h-96 object-cover rounded-lg shadow-lg" loading="lazy">
+                        <img src="assets/images/about-preview.jpg" alt="Herkinx Events Team" class="w-full h-48 md:h-96 object-cover rounded-lg shadow-lg" loading="lazy">
                         <div class="absolute -bottom-6 -right-6 bg-gold text-white p-6 rounded-lg shadow-lg">
                             <div class="text-3xl font-bold font-display">10+</div>
                             <div class="text-sm">Years Experience</div>
@@ -256,7 +256,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Service Card 1 -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
-                        <div class="relative h-64 overflow-hidden">
+                        <div class="relative h-48 md:h-64 overflow-hidden">
                             <img src="assets/images/services/wedding.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
@@ -271,7 +271,7 @@
                     
                     <!-- Service Card 2 -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
-                        <div class="relative h-64 overflow-hidden">
+                        <div class="relative h-48 md:h-64 overflow-hidden">
                             <img src="assets/images/services/corporate.jpg" alt="Corporate Events" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
@@ -286,7 +286,7 @@
                     
                     <!-- Service Card 3 -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-on-scroll">
-                        <div class="relative h-64 overflow-hidden">
+                        <div class="relative h-48 md:h-64 overflow-hidden">
                             <img src="assets/images/services/birthday.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                         </div>
@@ -321,13 +321,13 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Portfolio Item 1 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="wedding">
-                        <div class="relative h-80 overflow-hidden">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden">
                             <img src="assets/images/portfolio/wedding-001.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Elegant Wedding</h4>
                                     <p class="text-gray-200 mb-4">Grand Hotel, Lagos</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors">
                                         View Details
                                     </button>
                                 </div>
@@ -337,13 +337,13 @@
                     
                     <!-- Portfolio Item 2 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="corporate">
-                        <div class="relative h-80 overflow-hidden">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden">
                             <img src="assets/images/portfolio/corporate-001.jpg" alt="Corporate Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Annual Gala</h4>
                                     <p class="text-gray-200 mb-4">Eko Convention Center</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors">
                                         View Details
                                     </button>
                                 </div>
@@ -353,13 +353,13 @@
                     
                     <!-- Portfolio Item 3 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="birthday">
-                        <div class="relative h-80 overflow-hidden">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden">
                             <img src="assets/images/portfolio/birthday-001.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">50th Birthday</h4>
                                     <p class="text-gray-200 mb-4">Private Residence</p>
-                                    <button class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors">
+                                    <button class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors">
                                         View Details
                                     </button>
                                 </div>

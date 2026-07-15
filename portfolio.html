@@ -145,13 +145,13 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 z-50 w-80 bg-white border-l shadow-2xl">
             <div class="px-4 py-6 space-y-3 pt-16">
-                <a href="index.html" class="block py-2 text-secondary hover:text-gold">Home</a>
-                <a href="about.html" class="block py-2 text-secondary hover:text-gold">About</a>
-                <a href="services.html" class="block py-2 text-secondary hover:text-gold">Services</a>
-                <a href="portfolio.html" class="block py-2 text-secondary hover:text-gold">Portfolio</a>
-                <a href="testimonials.html" class="block py-2 text-secondary hover:text-gold">Testimonials</a>
-                <a href="faq.html" class="block py-2 text-secondary hover:text-gold">FAQ</a>
-                <a href="contact.html" class="block py-2 text-secondary hover:text-gold">Contact</a>
+                <a href="index.html" class="block py-3 text-secondary hover:text-gold">Home</a>
+                <a href="about.html" class="block py-3 text-secondary hover:text-gold">About</a>
+                <a href="services.html" class="block py-3 text-secondary hover:text-gold">Services</a>
+                <a href="portfolio.html" class="block py-3 text-secondary hover:text-gold">Portfolio</a>
+                <a href="testimonials.html" class="block py-3 text-secondary hover:text-gold">Testimonials</a>
+                <a href="faq.html" class="block py-3 text-secondary hover:text-gold">FAQ</a>
+                <a href="contact.html" class="block py-3 text-secondary hover:text-gold">Contact</a>
                 <a href="booking.html" class="block py-3 bg-secondary text-white text-center font-medium hover:bg-gold">Book Now</a>
             </div>
         </div>
@@ -160,7 +160,7 @@
     <!-- Main Content -->
     <main id="main-content">
         <!-- Hero Section -->
-        <section class="relative h-96 flex items-center justify-center">
+        <section class="relative min-h-[50vh] md:h-96 flex items-center justify-center">
             <!-- Background Image -->
             <div class="absolute inset-0 bg-black/50 z-10"></div>
             <div class="absolute inset-0">
@@ -182,22 +182,22 @@
         <section class="py-8 bg-white sticky top-20 z-40">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-wrap justify-center gap-4">
-                    <button class="filter-button active px-6 py-2 rounded-full bg-secondary text-white font-medium transition-colors" data-filter="all">
+                    <button class="filter-button active px-6 py-3 rounded-full bg-secondary text-white font-medium transition-colors" data-filter="all">
                         All
                     </button>
-                    <button class="filter-button px-6 py-2 rounded-full bg-accent text-secondary font-medium hover:bg-secondary hover:text-white transition-colors" data-filter="wedding">
+                    <button class="filter-button px-6 py-3 rounded-full bg-accent text-secondary font-medium hover:bg-secondary hover:text-white transition-colors" data-filter="wedding">
                         Weddings
                     </button>
-                    <button class="filter-button px-6 py-2 rounded-full bg-accent text-secondary font-medium hover:bg-secondary hover:text-white transition-colors" data-filter="corporate">
+                    <button class="filter-button px-6 py-3 rounded-full bg-accent text-secondary font-medium hover:bg-secondary hover:text-white transition-colors" data-filter="corporate">
                         Corporate
                     </button>
-                    <button class="filter-button px-6 py-2 rounded-full bg-accent text-secondary font-medium hover:bg-secondary hover:text-white transition-colors" data-filter="birthday">
+                    <button class="filter-button px-6 py-3 rounded-full bg-accent text-secondary font-medium hover:bg-secondary hover:text-white transition-colors" data-filter="birthday">
                         Birthdays
                     </button>
-                    <button class="filter-button px-6 py-2 rounded-full bg-accent text-secondary font-medium hover:bg-secondary hover:text-white transition-colors" data-filter="traditional">
+                    <button class="filter-button px-6 py-3 rounded-full bg-accent text-secondary font-medium hover:bg-secondary hover:text-white transition-colors" data-filter="traditional">
                         Traditional
                     </button>
-                    <button class="filter-button px-6 py-2 rounded-full bg-accent text-secondary font-medium hover:bg-secondary hover:text-white transition-colors" data-filter="other">
+                    <button class="filter-button px-6 py-3 rounded-full bg-accent text-secondary font-medium hover:bg-secondary hover:text-white transition-colors" data-filter="other">
                         Other Events
                     </button>
                 </div>
@@ -210,13 +210,13 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
                     <!-- Portfolio Item 1 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="wedding">
-                        <div class="relative h-80 overflow-hidden rounded-lg">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden rounded-lg">
                             <img src="assets/images/portfolio/wedding-001.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Elegant Wedding</h4>
                                     <p class="text-gray-200 mb-4">Grand Hotel, Lagos</p>
-                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Elegant Wedding">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Elegant Wedding">
                                         View Details
                                     </button>
                                 </div>
@@ -226,13 +226,13 @@
                     
                     <!-- Portfolio Item 2 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="corporate">
-                        <div class="relative h-80 overflow-hidden rounded-lg">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden rounded-lg">
                             <img src="assets/images/portfolio/corporate-001.jpg" alt="Corporate Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Annual Gala</h4>
                                     <p class="text-gray-200 mb-4">Eko Convention Center</p>
-                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Annual Gala">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Annual Gala">
                                         View Details
                                     </button>
                                 </div>
@@ -242,13 +242,13 @@
                     
                     <!-- Portfolio Item 3 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="birthday">
-                        <div class="relative h-80 overflow-hidden rounded-lg">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden rounded-lg">
                             <img src="assets/images/portfolio/birthday-001.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">50th Birthday</h4>
                                     <p class="text-gray-200 mb-4">Private Residence</p>
-                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for 50th Birthday">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for 50th Birthday">
                                         View Details
                                     </button>
                                 </div>
@@ -258,13 +258,13 @@
                     
                     <!-- Portfolio Item 4 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="wedding">
-                        <div class="relative h-80 overflow-hidden rounded-lg">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden rounded-lg">
                             <img src="assets/images/portfolio/wedding-002.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Garden Wedding</h4>
                                     <p class="text-gray-200 mb-4">Lekki Gardens</p>
-                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Garden Wedding">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Garden Wedding">
                                         View Details
                                     </button>
                                 </div>
@@ -274,13 +274,13 @@
                     
                     <!-- Portfolio Item 5 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="traditional">
-                        <div class="relative h-80 overflow-hidden rounded-lg">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden rounded-lg">
                             <img src="assets/images/portfolio/traditional-001.jpg" alt="Traditional Marriage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Igbo Traditional</h4>
                                     <p class="text-gray-200 mb-4">Cultural Center</p>
-                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Igbo Traditional">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Igbo Traditional">
                                         View Details
                                     </button>
                                 </div>
@@ -290,13 +290,13 @@
                     
                     <!-- Portfolio Item 6 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="corporate">
-                        <div class="relative h-80 overflow-hidden rounded-lg">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden rounded-lg">
                             <img src="assets/images/portfolio/corporate-002.jpg" alt="Corporate Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Product Launch</h4>
                                     <p class="text-gray-200 mb-4">Federal Palace Hotel</p>
-                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Product Launch">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Product Launch">
                                         View Details
                                     </button>
                                 </div>
@@ -306,13 +306,13 @@
                     
                     <!-- Portfolio Item 7 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="birthday">
-                        <div class="relative h-80 overflow-hidden rounded-lg">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden rounded-lg">
                             <img src="assets/images/portfolio/birthday-002.jpg" alt="Birthday Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Kids Birthday</h4>
                                     <p class="text-gray-200 mb-4">Fun Park</p>
-                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Kids Birthday">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Kids Birthday">
                                         View Details
                                     </button>
                                 </div>
@@ -322,13 +322,13 @@
                     
                     <!-- Portfolio Item 8 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="wedding">
-                        <div class="relative h-80 overflow-hidden rounded-lg">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden rounded-lg">
                             <img src="assets/images/portfolio/wedding-003.jpg" alt="Wedding Decoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Beach Wedding</h4>
                                     <p class="text-gray-200 mb-4">Elegant Beach Resort</p>
-                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Beach Wedding">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Beach Wedding">
                                         View Details
                                     </button>
                                 </div>
@@ -338,13 +338,13 @@
                     
                     <!-- Portfolio Item 9 -->
                     <div class="portfolio-item relative group cursor-pointer animate-on-scroll" data-category="other">
-                        <div class="relative h-80 overflow-hidden rounded-lg">
+                        <div class="relative h-48 sm:h-64 md:h-80 overflow-hidden rounded-lg">
                             <img src="assets/images/portfolio/other-001.jpg" alt="Other Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-500 flex items-center justify-center">
                                 <div class="text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                     <h4 class="font-display text-xl text-white font-semibold mb-2">Graduation Party</h4>
                                     <p class="text-gray-200 mb-4">University Campus</p>
-                                    <button type="button" class="text-white border-2 border-white px-6 py-2 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Graduation Party">
+                                    <button type="button" class="text-white border-2 border-white px-6 py-3 hover:bg-white hover:text-secondary transition-colors" aria-label="View details for Graduation Party">
                                         View Details
                                     </button>
                                 </div>
