@@ -154,38 +154,36 @@
                 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-white/90 backdrop-blur-sm text-secondary hover:bg-gold/10 transition-colors shadow-sm" aria-label="Toggle menu" aria-expanded="false">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
+                  <button id="mobile-menu-button" class="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars hamburger-icon"></i>
+                  </button>
                 </div>
+              </div>
             </div>
-        </div>
-        
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-overlay" class="mobile-overlay"></div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 z-50 w-80 bg-white border-l shadow-2xl">
-            <div class="px-4 pt-6 pb-3 border-b border-gray-100">
-                <span class="font-display text-xl font-bold">HERKINX <span class="text-gold">EVENTS</span></span>
-            </div>
-            <div class="flex justify-end p-4">
-                <button id="mobile-close" class="p-2 text-secondary hover:text-gold transition-colors" aria-label="Close menu">
-                    <i class="fas fa-times text-2xl"></i>
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-overlay" class="mobile-overlay"></div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+              <div class="mobile-menu-header">
+                <span class="mobile-menu-brand">HERKINX <span class="text-gold">EVENTS</span></span>
+                <button id="mobile-close" class="mobile-close-btn" aria-label="Close menu">
+                  <i class="fas fa-times"></i>
                 </button>
+              </div>
+              <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+                <a href="testimonials.html" class="mobile-nav-link">Testimonials</a>
+                <a href="faq.html" class="mobile-nav-link">FAQ</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+                <a href="booking.html" class="mobile-nav-link mobile-nav-link-book">Book Now</a>
+              </nav>
             </div>
-            <div class="px-4 py-2 space-y-3">
-                <a href="index.html" class="block px-6 py-4 text-secondary bg-gradient-to-r from-gold to-white hover:opacity-90 border-b border-white/30">Home</a>
-                <a href="about.html" class="block px-6 py-4 text-secondary bg-gradient-to-r from-gold to-white hover:opacity-90 border-b border-white/30">About</a>
-                <a href="services.html" class="block px-6 py-4 text-secondary bg-gradient-to-r from-gold to-white hover:opacity-90 border-b border-white/30">Services</a>
-                <a href="portfolio.html" class="block px-6 py-4 text-secondary bg-gradient-to-r from-gold to-white hover:opacity-90 border-b border-white/30">Portfolio</a>
-                <a href="testimonials.html" class="block px-6 py-4 text-secondary bg-gradient-to-r from-gold to-white hover:opacity-90 border-b border-white/30">Testimonials</a>
-                <a href="faq.html" class="block px-6 py-4 text-secondary bg-gradient-to-r from-gold to-white hover:opacity-90 border-b border-white/30">FAQ</a>
-                <a href="contact.html" class="block px-6 py-4 text-secondary bg-gradient-to-r from-gold to-white hover:opacity-90 border-b border-white/30">Contact</a>
-                <a href="booking.html" class="block py-3 bg-secondary text-white text-center font-medium hover:bg-gold">Book Now</a>
-            </div>
-        </div>
-    </header>
+          </header>
 
     <!-- Main Content -->
     <main id="main-content">
