@@ -27,6 +27,15 @@ body {
 }
 
 /* ============================================
+   Logo
+   ============================================ */
+
+.logo-img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ============================================
    Custom Scrollbar
    ============================================ */
 
@@ -269,6 +278,12 @@ body {
 .form-textarea {
   min-height: 150px;
   resize: vertical;
+}
+
+.form-input.error,
+.form-select.error,
+.form-textarea.error {
+  border-color: #e74c3c;
 }
 
 .form-error .form-input,
@@ -1248,17 +1263,7 @@ body {
   color: #d4af37;
 }
 
-/* Step connectors */
-.step-connector {
-  position: absolute;
-  top: 28px;
-  left: 50%;
-  right: 50%;
-  height: 2px;
-  background: #e5e5e5;
-  z-index: 1;
-}
-
+/* Step connectors - gold variant */
 .step-connector-gold {
   position: absolute;
   top: 28px;

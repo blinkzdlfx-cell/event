@@ -34,11 +34,15 @@ function initFAQ() {
         const itemCategory = item.getAttribute('data-category');
         if (category === 'all' || category === itemCategory) {
           item.style.display = 'block';
-          gsap.from(item, { opacity: 0, y: 20, duration: 0.3, ease: 'power2.out' });
+          if (typeof gsap !== 'undefined') gsap.from(item, { opacity: 0, y: 20, duration: 0.3, ease: 'power2.out' });
         } else {
-          gsap.to(item, { opacity: 0, y: -10, duration: 0.2, onComplete: () => {
+          if (typeof gsap !== 'undefined') {
+            gsap.to(item, { opacity: 0, y: -10, duration: 0.2, onComplete: () => {
+              item.style.display = 'none';
+            }});
+          } else {
             item.style.display = 'none';
-          }});
+          }
         }
       });
 
@@ -64,13 +68,17 @@ function initFAQ() {
 
           if (query === '' || text.includes(query)) {
             item.style.display = 'block';
-            gsap.from(item, { opacity: 0, y: 10, duration: 0.3, ease: 'power2.out' });
+            if (typeof gsap !== 'undefined') gsap.from(item, { opacity: 0, y: 10, duration: 0.3, ease: 'power2.out' });
             // Highlight matches
             highlightText(item, query);
           } else {
-            gsap.to(item, { opacity: 0, y: -10, duration: 0.2, onComplete: () => {
+            if (typeof gsap !== 'undefined') {
+              gsap.to(item, { opacity: 0, y: -10, duration: 0.2, onComplete: () => {
+                item.style.display = 'none';
+              }});
+            } else {
               item.style.display = 'none';
-            }});
+            }
           }
         });
 
@@ -87,7 +95,7 @@ function initFAQ() {
 
     if (!hasVisibleItems && (query || document.querySelector('.faq-category.active')?.getAttribute('data-category') !== 'all')) {
       noResults.style.display = 'block';
-      gsap.from(noResults, { opacity: 0, y: 20, duration: 0.3 });
+      if (typeof gsap !== 'undefined') gsap.from(noResults, { opacity: 0, y: 20, duration: 0.3 });
     } else {
       noResults.style.display = 'none';
     }

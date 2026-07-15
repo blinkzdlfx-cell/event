@@ -31,7 +31,6 @@ function initPortfolioFilter() {
               duration: 0.5,
               delay: index * 0.05,
               ease: 'power2.out',
-              clearProps: 'all'
             }
           );
         } else {
